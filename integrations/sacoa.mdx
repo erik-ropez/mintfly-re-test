@@ -1,7 +1,7 @@
 ---
-title: "Connect Sacoa to Rocket Effect (Full Guide)"
+title: "Sacoa Integration: Sync Cards, Balances and Profiles"
 sidebarTitle: "Sacoa"
-description: "Sync Sacoa cardholder data, balances, and play history with Rocket Effect to enable online card sales and targeted guest marketing."
+description: "Connect Sacoa (cloud or on-premise) to Rocket Effect to sync cardholder data, card balances, and play history for online sales and targeted campaigns."
 ---
 
 Sacoa is a leading debit card and cashless payment system trusted by amusement parks, arcades, and family entertainment centers around the world. Connecting Sacoa to Rocket Effect brings your guests' card records, balances, and play activity into one place — giving your marketing team the data it needs to run personalized campaigns, automate loyalty rewards, and sell or reload cards through your website without any manual data handling.
@@ -10,7 +10,7 @@ Sacoa is a leading debit card and cashless payment system trusted by amusement p
 
 Linking your Sacoa account unlocks the following capabilities inside Rocket Effect:
 
-- **Unified guest card records** — Sacoa card holders are imported and matched to Rocket Effect guest profiles.
+- **Unified guest card records** — Sacoa cardholders are imported and matched to Rocket Effect guest profiles.
 - **Card balance visibility** — see each guest's current Sacoa balance alongside their marketing and loyalty data.
 - **Play history for segmentation** — target guests based on visit frequency, last visit date, and total spend.
 - **Online card purchases and reloads** — give guests a convenient way to buy new cards or add credits before they arrive, directly from your website.
@@ -70,7 +70,7 @@ Once connected, the following Sacoa data flows into Rocket Effect automatically 
 | **Card Balances** | Current credit balance for each guest's Sacoa card |
 | **Game Play Activity** | Individual play sessions linked to each guest's card |
 
-New card holders registered in Sacoa will be picked up and imported during the next scheduled sync.
+New cardholders registered in Sacoa will be picked up and imported during the next scheduled sync.
 
 ## Enabling Online Card Sales
 
@@ -85,21 +85,23 @@ All online transactions are captured in the guest's Rocket Effect profile, keepi
 
 ## Troubleshooting
 
-<Accordion title="Credentials are not accepted during connection">
-  Double-check that you have entered your Sacoa credentials exactly as provided, with no leading or trailing spaces. On-premise customers should also verify that the server endpoint URL is correct and that the Sacoa server is reachable from the internet. Contact Sacoa support if you need help confirming external API access.
-</Accordion>
+<AccordionGroup>
+  <Accordion title="Credentials are not accepted during connection">
+    Double-check that you have entered your Sacoa credentials exactly as provided, with no leading or trailing spaces. On-premise customers should also verify that the server endpoint URL is correct and that the Sacoa server is reachable from the internet. Contact Sacoa support if you need help confirming external API access.
+  </Accordion>
 
-<Accordion title="Sync is running slowly or appears stuck">
-  Large guest databases can require additional time on the first import. Wait at least 15 minutes before taking action. If the sync still shows **In Progress** after 30 minutes, go to **Settings → Integrations → Sacoa** and click **Force Re-sync** to restart the import.
-</Accordion>
+  <Accordion title="Sync is running slowly or appears stuck">
+    Large guest databases can require additional time on the first import. Wait at least 15 minutes before taking action. If the sync still shows **In Progress** after 30 minutes, go to **Settings → Integrations → Sacoa** and click **Force Re-sync** to restart the import.
+  </Accordion>
 
-<Accordion title="Card balances are not current">
-  Balances are refreshed on each scheduled sync cycle. To pull the latest data immediately, navigate to **Settings → Integrations → Sacoa** and click **Sync Now**.
-</Accordion>
+  <Accordion title="Card balances are not current">
+    Balances are refreshed on each scheduled sync cycle. To pull the latest data immediately, navigate to **Settings → Integrations → Sacoa** and click **Sync Now**.
+  </Accordion>
 
-<Accordion title="Some guests are missing from Rocket Effect">
-  Confirm that the **Guest Card Records** option is enabled in your sync preferences. On-premise Sacoa customers should also verify with their IT team that the API has read access to the complete guest database rather than a single register or location.
-</Accordion>
+  <Accordion title="Some guests are missing from Rocket Effect">
+    Confirm that the **Guest Card Records** option is enabled in your sync preferences. On-premise Sacoa customers should also verify with their IT team that the API has read access to the complete guest database rather than a single register or location.
+  </Accordion>
+</AccordionGroup>
 
 ---
 

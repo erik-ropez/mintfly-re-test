@@ -1,7 +1,7 @@
 ---
-title: "Connect Embed to Rocket Effect (Full Guide)"
+title: "Embed Integration: Guest Cards, Balances and Campaigns"
 sidebarTitle: "Embed"
-description: "Pull Embed guest card data, balances, and play history into Rocket Effect to fuel personalized marketing and online card sales."
+description: "Connect Embed to Rocket Effect to import guest card balances, play activity, and transaction history for targeted marketing and online card sales."
 ---
 
 Embed is a cloud-based cashless card and point-of-sale system built for entertainment centers and arcades. Connecting Embed to Rocket Effect lets you draw on your guests' card balances, game activity, and transaction records to power segmented email and SMS campaigns, automate birthday and re-engagement messages, and sell or reload cards directly through your website — all without leaving Rocket Effect.
@@ -10,7 +10,7 @@ Embed is a cloud-based cashless card and point-of-sale system built for entertai
 
 Once you link your Embed account, Rocket Effect gains access to:
 
-- **Guest card records** — Embed card holders are imported as guest profiles inside Rocket Effect.
+- **Guest card records** — Embed cardholders are imported as guest profiles inside Rocket Effect.
 - **Card balances** — see each guest's current balance alongside their marketing engagement.
 - **Game and play activity** — filter and target guests based on how often and how recently they play.
 - **Transaction history** — use card purchase and reload data to identify your highest-value guests.
@@ -88,21 +88,23 @@ All online transactions are recorded against the guest's Rocket Effect profile, 
 
 ## Troubleshooting
 
-<Accordion title="Credential error during connection">
-  Confirm your API key or token is copied exactly as shown in the Embed back-office. If the error persists after re-pasting, contact Embed support to verify that API access is enabled for your account and that your credentials have not expired.
-</Accordion>
+<AccordionGroup>
+  <Accordion title="Credential error during connection">
+    Confirm your API key or token is copied exactly as shown in the Embed back-office. If the error persists after re-pasting, contact Embed support to verify that API access is enabled for your account and that your credentials have not expired.
+  </Accordion>
 
-<Accordion title="Guest data is missing after sync">
-  Check that the **Guest Records** toggle is enabled in your sync preferences (step 4 above). Also confirm with Embed support that your API credentials have access to the full guest database, particularly if you operate multiple locations.
-</Accordion>
+  <Accordion title="Guest data is missing after sync">
+    Check that the **Guest Records** toggle is enabled in your sync preferences (step 4 above). Also confirm with Embed support that your API credentials have access to the full guest database, particularly if you operate multiple locations.
+  </Accordion>
 
-<Accordion title="Re-syncing guest records">
-  If you suspect guest data is out of date, go to **Settings → Integrations → Embed** and click **Sync Now** to trigger a manual refresh. For a complete re-import, click **Force Re-sync** — note that this may take longer to complete for large databases.
-</Accordion>
+  <Accordion title="Re-syncing guest records">
+    If you suspect guest data is out of date, go to **Settings → Integrations → Embed** and click **Sync Now** to trigger a manual refresh. For a complete re-import, click **Force Re-sync** — note that this may take longer to complete for large databases.
+  </Accordion>
 
-<Accordion title="Card balances are not reflecting recent reloads">
-  Balances update on each scheduled sync. To pull the latest balances immediately, navigate to **Settings → Integrations → Embed** and click **Sync Now**.
-</Accordion>
+  <Accordion title="Card balances are not reflecting recent reloads">
+    Balances update on each scheduled sync. To pull the latest balances immediately, navigate to **Settings → Integrations → Embed** and click **Sync Now**.
+  </Accordion>
+</AccordionGroup>
 
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: "Connect Brunswick & Clubspeed to Rocket Effect"
+title: "Brunswick and Clubspeed: Sync Venue Transaction Data"
 sidebarTitle: "Brunswick & Clubspeed"
-description: "Import Brunswick Meriq and Clubspeed guest transaction data into Rocket Effect to build targeted segments and automate venue marketing."
+description: "Import Brunswick Meriq and Clubspeed guest transaction data into Rocket Effect to build targeted segments and automate personalized venue marketing."
 ---
 
 Brunswick Meriq and Clubspeed are two of the most widely used management platforms in the entertainment venue industry. Connecting either or both systems to Rocket Effect pulls your guests' visit history, booking records, and transaction data directly into guest profiles — giving your team the audience insight needed to send the right message to the right guest at the right time. Whether you want to re-engage lapsed bowlers with a league promotion or bring back go-kart regulars with a speed-pass offer, this integration puts that data to work.
@@ -69,9 +69,9 @@ Before connecting either system, confirm you have:
     | **Transaction Records** | POS purchases including food, beverages, and add-ons |
     | **Visit Frequency** | Number of visits and most recent visit date |
 
-    ### Example Use Case
+    ### Example Use Case: Bowling League Re-Engagement
 
-    After importing Brunswick Meriq data, create a segment of guests who have bowled at least three times in the past six months but have not visited in the last 60 days. Send them a **"We miss you"** email featuring a discounted lane reservation — a highly targeted re-engagement campaign built entirely from your own visit data.
+    After importing Brunswick Meriq data, create a segment of guests who have bowled at least three times in the past six months but have not visited in the last 60 days. Send them a **"We miss you"** email featuring a discounted lane reservation or an exclusive bowling league invite — a highly targeted re-engagement campaign built entirely from your own visit data.
   </Tab>
 
   <Tab title="Clubspeed">
@@ -122,7 +122,7 @@ Before connecting either system, confirm you have:
     | **Transaction Records** | Purchases, upgrades, and add-ons completed at the venue |
     | **Visit Frequency** | Number of visits and most recent visit date |
 
-    ### Example Use Case
+    ### Example Use Case: Go-Kart Speed-Pass Campaign
 
     Use Clubspeed transaction history to build a segment of guests who purchased a race package in the past 90 days but have not returned since. Target them with a **speed-pass offer** via automated email — a personalized campaign that speaks directly to what they already love about your venue.
   </Tab>
@@ -136,21 +136,23 @@ Before connecting either system, confirm you have:
 
 ## Troubleshooting
 
-<Accordion title="Credentials are rejected during connection">
-  Verify that your API key or credentials are copied exactly as provided with no extra spaces. For Clubspeed, confirm that Rocket Effect has been granted the necessary permissions in the Clubspeed authorization dialog. Contact the respective support team if you need credentials regenerated.
-</Accordion>
+<AccordionGroup>
+  <Accordion title="Credentials are rejected during connection">
+    Verify that your API key or credentials are copied exactly as provided with no extra spaces. For Clubspeed, confirm that Rocket Effect has been granted the necessary permissions in the Clubspeed authorization dialog. Contact the respective support team if you need credentials regenerated.
+  </Accordion>
 
-<Accordion title="Guest data is incomplete after the first sync">
-  Check that all data category toggles are enabled in your sync preferences. Also confirm that your API credentials have read access to the full guest database. For multi-location operators, ensure your credentials cover all relevant locations, not just a single site.
-</Accordion>
+  <Accordion title="Guest data is incomplete after the first sync">
+    Check that all data category toggles are enabled in your sync preferences. Also confirm that your API credentials have read access to the full guest database. For multi-location operators, ensure your credentials cover all relevant locations, not just a single site.
+  </Accordion>
 
-<Accordion title="Sync is slow or appears to stall">
-  Allow at least 15 minutes for large first-time imports. If the status still shows **In Progress** after 30 minutes, go to **Settings → Integrations**, select the relevant tile, and click **Force Re-sync**.
-</Accordion>
+  <Accordion title="Sync is slow or appears to stall">
+    Allow at least 15 minutes for large first-time imports. If the status still shows **In Progress** after 30 minutes, go to **Settings → Integrations**, select the relevant tile, and click **Force Re-sync**.
+  </Accordion>
 
-<Accordion title="Visit history is not updating after new visits">
-  Data refreshes on the scheduled sync cycle. Trigger an immediate update by navigating to **Settings → Integrations**, selecting the relevant integration, and clicking **Sync Now**.
-</Accordion>
+  <Accordion title="Visit history is not updating after new visits">
+    Data refreshes on the scheduled sync cycle. Trigger an immediate update by navigating to **Settings → Integrations**, selecting the relevant integration, and clicking **Sync Now**.
+  </Accordion>
+</AccordionGroup>
 
 ---
 
