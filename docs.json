@@ -28,6 +28,17 @@
   "navigation": {
     "tabs": [
       {
+        "tab": "Developer Docs",
+        "groups": [
+          {
+            "group": "Admin Panel",
+            "pages": [
+              "backpack/index"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Documentation",
         "groups": [
           {

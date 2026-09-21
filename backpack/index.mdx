@@ -1,0 +1,178 @@
+---
+title: "Backpack Admin Container"
+sidebarTitle: "Backpack Admin Container"
+description: "Engineering reference for container-admin-backpack, the AddieSaaS container wrapping Backpack for Laravel into the admin panel."
+---
+
+AddieSaaS container wrapping [Backpack for Laravel](https://backpackforlaravel.com/) into the AddieSaaS container architecture, adding custom extensions for theming, saved views, dashlets, form templates, row-level permissions, and more.
+
+This container is based on a **custom fork of Backpack for Laravel v3.6**. The fork is hosted on Bitbucket at https://bitbucket.org/addiesaas/workspace/projects/BP. Refer to the [Backpack 3.6 documentation](https://backpackforlaravel.com/docs/3.6) when working with CRUD panel APIs, fields, columns, filters, and operations.
+
+## Key dependencies
+
+| Package | Purpose |
+|---|---|
+| `backpack/crud` | Core CRUD panel |
+| `backpack/logmanager` | Log viewer UI |
+| `barryvdh/laravel-elfinder` | File manager (Uploads) |
+| `spatie/laravel-permission` | Roles & permissions |
+| `calebporzio/sushi` | In-memory Eloquent models |
+
+## Environment variables
+
+| Variable | Default | Description |
+|---|---|---|
+| `BACKPACK_ADDIESAAS_CRUD_THEME` | `default` | Active CRUD theme name |
+| `BACKPACK_ADDIESAAS_DOMAIN` | — | Restrict admin panel to a specific domain |
+| `BACKPACK_ADDIESAAS_DISABLE_WEB_ROUTES` | `false` | Disable all web routes (API-only setups) |
+| `BACKPACK_ADDIESAAS_SEED_DEFAULT_ADMINS` | `true` | Seed default admin accounts on first install |
+
+## Authentication
+
+The admin panel uses two guards:
+
+- **Web:** `backpack` (session-based)
+- **API:** `admin-api` (OAuth 2 Password Grant via Laravel Passport)
+
+### API login endpoint
+
+```
+POST /api/clients/api/admin/login
+```
+
+See `Swagger/admin.yml` for the full spec.
+
+## Extended `CrudController`
+
+All CRUD controllers should extend `App\Containers\Admin\Backpack\Abstracts\CrudController` (not Backpack's base class directly). Extensions it adds:
+
+- **CRUD events** — every operation fires Laravel events in three forms so themes or other containers can hook in:
+  ```
+  {ControllerClass}:{event}
+  {ControllerClass}:{event}:{theme}
+  {ControllerClass}:{theme}:{event}
+  ```
+  Available events: `setup`, `indexCrud`, `search`, `showCrud`, `showDetails`, `createCrud`, `editCrud`, `beforeStoreCrud`, `storeCrud`, `beforeUpdateCrud`, `updateCrud`, `destroy`, `bulkDelete`, `clone`, `bulkClone`.
+
+- **Meta column support** — columns with `'meta' => true` automatically join the meta table and map the value into the result set.
+
+- **Row-level permission queries** — models implementing `RowLevelPermissions` automatically filter list/show/update/delete results by the current user's role permissions.
+
+- **Prev/Next navigation** — includes the `PrevNext` trait that resolves the previous/next entry in the current filtered & ordered result set.
+
+- **Form templates** — includes the `FormTemplates` trait enabling "prepare as template" from any CRUD form.
+
+- **Default ordering** — applies `ORDER BY {pk} DESC` automatically when no explicit order is set.
+
+## Extended `CrudPanel`
+
+`App\Containers\Admin\Backpack\Services\CrudPanel` extends Backpack's panel with additional traits:
+
+| Trait | What it adds |
+|---|---|
+| `Buttons` | Button helpers |
+| `Columns` | Column helpers |
+| `Dashlets` | Summary stat widgets above the list table |
+| `Filters` | Accepts `BackpackFilter` contract instances directly |
+| `FormTemplates` | Tag & create-route helpers for form templates |
+| `Query` | Query scoping helpers |
+| `Read` | `getEntries` / paginated read helpers |
+| `Search` | Full-text search helpers |
+| `Widgets` | Widget helpers |
+
+### Dashlets
+
+Dashlets are summary stat panels rendered above the CRUD list. Add them with:
+
+```php
+$this->crud->addDashlet([
+    'name'       => 'total_orders',
+    'label'      => 'Total Orders',
+    'type'       => 'text',          // or any view under crud::dashlets.*
+    'filterable' => true,            // re-evaluate when filters change
+    'value'      => fn($entries, $query) => $query->count(),
+]);
+```
+
+### Custom filters
+
+Implement `App\Containers\Admin\Backpack\Contracts\BackpackFilter` and pass the instance to `addFilter()`:
+
+```php
+$this->crud->addFilter(new MyFilter());
+```
+
+## Menu system
+
+`BackpackMenu` is a singleton shared to views as `$backpackMenu`. Any container can contribute items by listening to the menu-build event and calling `$menu->addItems([...])`. Menu items support permission-based visibility:
+
+```php
+[
+    'permissions' => ['admins.list'],   // all listed permissions required
+    'hasanyrole'  => ['superadmin'],    // or any of these roles
+    'href'        => '/admin/user',
+    'label'       => 'Users',
+    'order'       => 140,
+    'items'       => [...],             // optional sub-menu
+]
+```
+
+The dashboard redirects to the first accessible menu item (or the URL set by `settings.main.startup.url`).
+
+## Form templates
+
+Form templates let admins save a pre-filled form as a reusable template. To enable on a CRUD:
+
+1. Implement `App\Containers\Admin\Backpack\Contracts\FormTemplateProvider` (extend `Abstracts\FormTemplateProvider`).
+2. Register it via `CollectFormTemplateProvidersEvent`.
+3. Call `$this->crud->setFormTemplateTag(...)` / `setFormTemplateCreateRoute(...)` in the controller setup.
+
+## Theming
+
+Theme support is built into this container. The active theme comes from `BACKPACK_ADDIESAAS_CRUD_THEME` (config key `backpack.addiesaas.crud_theme`).
+
+### Default theme
+
+Original Backpack CRUD templates live under `UI/WEB/Resources/Views/crud/default/`. The `vendor/crud` overrides load the theme-specific or default version:
+
+```blade
+@includeFirst(["admin/backpack::crud.{$backpackCrudTheme}.list", 'admin/backpack::crud.default.list'])
+```
+
+### Theme Twenty
+
+Available via the companion container `container-admin-backpack-theme-twenty`.
+
+## Saved views & saved filters
+
+Admins can persist named CRUD views (column set + filter state + dashlet selection) and share them with other admins. This is backed by:
+
+- `admins_saved_views` — stores the view configuration (columns, filters, groups, dashlets)
+- `admins_saved_views_admins` — pivot for sharing between admins
+- `admins_saved_filters` — lightweight filter-only presets per CRUD
+
+## Built-in CRUD controllers
+
+| Controller | Route | Permission |
+|---|---|---|
+| `AdminCrudController` | `/admin/user` | `admins.*` |
+| `RoleCrudController` | `/admin/role` | |
+| `SettingCrudController` | `/admin/setting` | `settings.*` |
+| `FormTemplateCrudController` | `/admin/form-template/{tag}` | |
+| `RowAccessModelCrudController` | `/admin/row-access-model` | |
+| `LogController` | `/admin/log` | `logs.list` |
+| `PhpInfoController` | `/admin/phpinfo` | |
+
+## Permissions
+
+Migrations seed the following permission groups:
+
+- `admins.*` — manage admin users
+- `settings.*` — manage settings
+- `logs.list` — view logs
+- `uploads.*` — file manager access
+- `admins.update.notifications` — manage admin notification preferences
+
+## Draft support
+
+`CrudFormDraft` model and `CrudFormDraftMiddleware` allow CRUD forms to auto-save drafts while editing, preventing data loss on accidental navigation.
