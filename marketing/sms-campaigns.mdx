@@ -1,0 +1,117 @@
+---
+title: "Create and Manage SMS Marketing Campaigns"
+sidebarTitle: "SMS Campaigns"
+description: "Send targeted, compliant text message campaigns in Rocket Effect to reach FEC guests instantly with promotions, reminders, and automated follow-ups."
+---
+
+SMS is the highest-engagement channel available to you — text messages are typically read within minutes of delivery. Rocket Effect lets you send targeted SMS campaigns to opted-in guests, automate trigger-based messages, and track delivery and click performance, all from the same platform you use for email. This guide covers everything from compliance requirements to crafting your first message.
+
+## Opt-In Requirements and Compliance
+
+Before sending any SMS campaign, you must have explicit consent from each recipient. Rocket Effect enforces this automatically — only guests who have opted in to SMS communications appear in your SMS audience.
+
+<Warning>
+  You may only send SMS messages to guests who have explicitly opted in to text marketing. Sending to guests without documented consent violates the Telephone Consumer Protection Act (TCPA) and may result in significant fines. Never import a phone list and send to it without confirming prior opt-in status.
+</Warning>
+
+Guests can opt in through any of these touchpoints:
+
+- **Card Registration** — guests check the SMS opt-in box when registering a play card online or at your venue.
+- **Party or Event Booking** — an opt-in checkbox is presented during the booking flow.
+- **Web Form / Popup** — a phone number field with SMS consent language on your Rocket Effect-powered landing page or popup.
+
+All opt-in records include a timestamp and source, which you can export for compliance documentation under **Account → Compliance**.
+
+## Creating an SMS Campaign
+
+<Steps>
+  <Step title="Open the SMS Campaign Builder">
+    Navigate to **Marketing → SMS Campaigns** and click **New Campaign**. Enter an internal campaign name for your own reference — this name is not sent to guests.
+  </Step>
+
+  <Step title="Select Your Audience">
+    Choose from:
+
+    - **All Opted-In Guests** — sends to every guest who has consented to SMS.
+    - **Filtered Segment** — narrow your audience by last visit date, loyalty tier, card balance, age group, or other guest attributes.
+    - **Specific List** — target a saved list such as VIP members or birthday-month guests.
+
+    The recipient count updates in real time as you adjust filters.
+  </Step>
+
+  <Step title="Write Your Message">
+    Type your message in the text field. Keep these guidelines in mind:
+
+    - **Character limit:** Standard SMS messages are 160 characters. Messages exceeding 160 characters are split into multiple segments and may incur additional send costs.
+    - **Links:** Paste any URL and Rocket Effect will automatically shorten it to save characters and enable click tracking.
+    - **Personalization:** Click **Insert Token** to add dynamic content like the guest's first name or a promo code.
+
+    <Note>
+      Standard SMS segments are 160 characters. If your message includes a shortened link or Unicode characters (emojis), the effective limit per segment drops to 153 characters. Rocket Effect displays a live character count and segment counter as you type.
+    </Note>
+  </Step>
+
+  <Step title="Schedule the Campaign">
+    Choose one of the following options:
+
+    - **Send Immediately** — the campaign sends as soon as you confirm.
+    - **Schedule for Later** — select a date and time. Rocket Effect sends in your venue's local timezone.
+
+    For ongoing automated messages, set up an **Automated SMS** instead (see below).
+  </Step>
+
+  <Step title="Review and Confirm">
+    Preview the final message and verify the recipient count. Click **Send Test** to send a sample message to your own phone number. When everything is correct, click **Send** or **Schedule** to launch.
+  </Step>
+</Steps>
+
+## Automated SMS
+
+Trigger-based SMS messages send automatically when a guest meets a defined condition. To create an automation, choose **Automated Trigger** when creating a new campaign and configure the trigger:
+
+| Trigger | When It Fires |
+|---|---|
+| **Birthday** | A configurable number of days before the guest's birthday |
+| **Low Card Balance** | When a play card balance drops below a threshold you define |
+| **Post-Visit Follow-Up** | A set number of hours after the guest's card is used at your venue |
+| **Win-Back** | After a guest hasn't visited in a configurable number of days |
+
+Automations run continuously in the background. You can pause, edit, or deactivate any automation at any time without losing its history. Guests who have unsubscribed from SMS are automatically excluded regardless of trigger conditions.
+
+## Personalization
+
+Click the **{ }** token button in the message editor to insert personalized content:
+
+| Token | Output |
+|---|---|
+| `{{first_name}}` | Guest's first name |
+| `{{promo_code}}` | A unique or shared promo code linked to a discount |
+| `{{card_balance}}` | Current play card balance |
+| `{{loyalty_points}}` | Guest's current loyalty point total |
+
+Using the guest's first name in an SMS message meaningfully increases response rates. Pair a name token with a promo code for the highest-performing message format.
+
+## Viewing Performance
+
+After a campaign sends, click its name in the SMS campaign list to open the results report:
+
+- **Sent** — total messages dispatched
+- **Delivered** — messages confirmed as delivered to the handset
+- **Delivery Rate** — delivered as a percentage of sent (undelivered messages typically indicate invalid numbers)
+- **Clicks** — number of recipients who tapped a link in the message
+- **Click Rate** — clicks as a percentage of delivered messages
+- **Conversions** — downstream actions (card reloads, bookings, purchases) attributed to the campaign via tracked links
+- **Opt-Outs** — guests who replied STOP or unsubscribed after this message
+
+For a combined view of SMS and email performance over time, visit **Analytics → Campaign Performance**.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Email Campaigns" icon="envelope" href="/marketing/email-campaigns">
+    Build rich email campaigns with images, CTAs, and automated triggers to complement your SMS strategy.
+  </Card>
+  <Card title="Rewards & Loyalty" icon="star" href="/marketing/rewards-loyalty">
+    Set up points, VIP tiers, and birthday rewards to give your SMS automations compelling offers to promote.
+  </Card>
+</CardGroup>

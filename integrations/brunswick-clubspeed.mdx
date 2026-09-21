@@ -1,0 +1,164 @@
+---
+title: "Connect Brunswick & Clubspeed to Rocket Effect"
+sidebarTitle: "Brunswick & Clubspeed"
+description: "Import Brunswick Meriq and Clubspeed guest transaction data into Rocket Effect to build targeted segments and automate venue marketing."
+---
+
+Brunswick Meriq and Clubspeed are two of the most widely used management platforms in the entertainment venue industry. Connecting either or both systems to Rocket Effect pulls your guests' visit history, booking records, and transaction data directly into guest profiles — giving your team the audience insight needed to send the right message to the right guest at the right time. Whether you want to re-engage lapsed bowlers with a league promotion or bring back go-kart regulars with a speed-pass offer, this integration puts that data to work.
+
+## What These Integrations Enable
+
+- **Enriched guest profiles** — visit frequency, booking history, and spend data from Brunswick Meriq or Clubspeed flow into Rocket Effect automatically.
+- **Precise audience segmentation** — build lists based on real transaction and visit behavior for more relevant campaigns.
+- **Automated marketing triggers** — use visit history to fire re-engagement emails, birthday messages, or win-back campaigns without manual list management.
+
+## Prerequisites
+
+Before connecting either system, confirm you have:
+
+- An active Brunswick Meriq or Clubspeed account with API access enabled.
+- Admin-level credentials for each system you plan to connect.
+- Admin access to your Rocket Effect dashboard.
+
+<Tabs>
+  <Tab title="Brunswick Meriq">
+    ## About Brunswick Meriq
+
+    Brunswick Meriq is a comprehensive point-of-sale and venue management system designed for bowling centers and multi-attraction entertainment venues. It handles lane reservations, shoe rentals, food and beverage sales, and guest loyalty — making it a rich source of guest transaction and visit data for marketing.
+
+    ### Connecting Brunswick Meriq
+
+    <Steps>
+      <Step title="Open the Integrations section">
+        Log in to [rocketeffect.app](https://rocketeffect.app) and go to **Settings → Integrations** from the left sidebar.
+      </Step>
+
+      <Step title="Select Brunswick Meriq">
+        Find the **Brunswick (Meriq)** tile in the integrations list and click **Connect**.
+      </Step>
+
+      <Step title="Enter your API credentials">
+        Paste your Brunswick Meriq API key or access credentials into the required fields. If your venue operates multiple lanes or locations under one account, enter the location ID as well.
+      </Step>
+
+      <Step title="Choose sync preferences">
+        Select the data categories to import:
+        - Guest names and contact information
+        - Booking and reservation history
+        - Transaction records and spend data
+        - Visit frequency and last-visit dates
+
+        Enable all categories to give your segments the fullest possible picture of each guest.
+      </Step>
+
+      <Step title="Save and initiate the first sync">
+        Click **Save & Connect**. Rocket Effect will validate your credentials and begin the initial import. Allow a few minutes for the first sync to complete.
+      </Step>
+
+      <Step title="Confirm the connection">
+        When the sync finishes, the Brunswick Meriq tile will display a **Connected** badge and show the last sync timestamp. Imported guests will appear in the **Guests** section of your dashboard.
+      </Step>
+    </Steps>
+
+    ### Data That Syncs from Brunswick Meriq
+
+    | Data Type | Details |
+    |---|---|
+    | **Guest Names & Contact Info** | Name, email address, and phone number |
+    | **Booking History** | Lane reservations, party bookings, and event records |
+    | **Transaction Records** | POS purchases including food, beverages, and add-ons |
+    | **Visit Frequency** | Number of visits and most recent visit date |
+
+    ### Example Use Case
+
+    After importing Brunswick Meriq data, create a segment of guests who have bowled at least three times in the past six months but have not visited in the last 60 days. Send them a **"We miss you"** email featuring a discounted lane reservation — a highly targeted re-engagement campaign built entirely from your own visit data.
+  </Tab>
+
+  <Tab title="Clubspeed">
+    ## About Clubspeed
+
+    Clubspeed is a cloud-based POS and reservation management platform built for go-kart tracks and multi-attraction entertainment venues. It handles online booking, waiver collection, race scoring, and guest management — generating a detailed record of each guest's visits and purchases that Rocket Effect can use for marketing.
+
+    ### Connecting Clubspeed
+
+    <Steps>
+      <Step title="Open the Integrations section">
+        Log in to [rocketeffect.app](https://rocketeffect.app) and go to **Settings → Integrations** from the left sidebar.
+      </Step>
+
+      <Step title="Select Clubspeed">
+        Find the **Clubspeed** tile in the integrations list and click **Connect**.
+      </Step>
+
+      <Step title="Enter your API credentials">
+        Input your Clubspeed API key or OAuth credentials into the connection fields. If prompted, authorize Rocket Effect's access through the Clubspeed permission dialog.
+      </Step>
+
+      <Step title="Choose sync preferences">
+        Select which data to pull from Clubspeed:
+        - Guest names and contact information
+        - Booking and reservation history
+        - Transaction and purchase records
+        - Visit frequency and last-visit dates
+
+        Enabling all options ensures you have the full guest timeline available for audience building.
+      </Step>
+
+      <Step title="Save and initiate the first sync">
+        Click **Save & Connect**. Rocket Effect will authenticate and begin the initial data import. Larger databases may take several minutes to complete the first sync.
+      </Step>
+
+      <Step title="Confirm the connection">
+        Once the sync is done, the Clubspeed tile will show a **Connected** badge and the last sync timestamp. Imported guest records will appear in the **Guests** section of your dashboard.
+      </Step>
+    </Steps>
+
+    ### Data That Syncs from Clubspeed
+
+    | Data Type | Details |
+    |---|---|
+    | **Guest Names & Contact Info** | Name, email address, and phone number |
+    | **Booking History** | Race reservations, party bookings, and attraction sessions |
+    | **Transaction Records** | Purchases, upgrades, and add-ons completed at the venue |
+    | **Visit Frequency** | Number of visits and most recent visit date |
+
+    ### Example Use Case
+
+    Use Clubspeed transaction history to build a segment of guests who purchased a race package in the past 90 days but have not returned since. Target them with a **speed-pass offer** via automated email — a personalized campaign that speaks directly to what they already love about your venue.
+  </Tab>
+</Tabs>
+
+## Building Powerful Segments with Transaction History
+
+<Tip>
+  Transaction history from Brunswick Meriq and Clubspeed is one of the most powerful segmentation tools available in Rocket Effect. Combine visit frequency, last-visit recency, and total spend filters to build highly specific audience lists — for example, "bowled 5+ times, spent over $100, no visit in 45 days." The more precise your segment, the more relevant your message and the higher your conversion rate.
+</Tip>
+
+## Troubleshooting
+
+<Accordion title="Credentials are rejected during connection">
+  Verify that your API key or credentials are copied exactly as provided with no extra spaces. For Clubspeed, confirm that Rocket Effect has been granted the necessary permissions in the Clubspeed authorization dialog. Contact the respective support team if you need credentials regenerated.
+</Accordion>
+
+<Accordion title="Guest data is incomplete after the first sync">
+  Check that all data category toggles are enabled in your sync preferences. Also confirm that your API credentials have read access to the full guest database. For multi-location operators, ensure your credentials cover all relevant locations, not just a single site.
+</Accordion>
+
+<Accordion title="Sync is slow or appears to stall">
+  Allow at least 15 minutes for large first-time imports. If the status still shows **In Progress** after 30 minutes, go to **Settings → Integrations**, select the relevant tile, and click **Force Re-sync**.
+</Accordion>
+
+<Accordion title="Visit history is not updating after new visits">
+  Data refreshes on the scheduled sync cycle. Trigger an immediate update by navigating to **Settings → Integrations**, selecting the relevant integration, and clicking **Sync Now**.
+</Accordion>
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Guest Profiles" icon="user" href="/concepts/guest-profiles">
+    See how synced Brunswick and Clubspeed data enriches your guest profiles in Rocket Effect.
+  </Card>
+  <Card title="Email Campaigns" icon="envelope" href="/marketing/email-campaigns">
+    Use your new guest segments to build and launch targeted email marketing campaigns.
+  </Card>
+</CardGroup>

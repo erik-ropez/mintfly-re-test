@@ -1,0 +1,115 @@
+---
+title: "Connect Intercard to Rocket Effect (Full Guide)"
+sidebarTitle: "Intercard"
+description: "Sync Intercard guest card data, balances, and play history with Rocket Effect to power online card sales and targeted marketing."
+---
+
+Intercard is the world's leading cashless card system for amusement and family entertainment center operators, trusted by more than 4,000 locations worldwide. By connecting Intercard to Rocket Effect, you bring your guests' card balances, game play history, and transaction records directly into your marketing platform — making it easy to run personalized campaigns, sell and reload cards online, and build richer guest profiles without manual data exports.
+
+## What the Integration Enables
+
+Once connected, the Intercard integration gives you:
+
+- **Unified guest profiles** — card holder records from Intercard are automatically merged into Rocket Effect guest profiles.
+- **Live card balance visibility** — view each guest's current card balance alongside their marketing history.
+- **Game play and purchase history** — use real visit and spend data to segment audiences and trigger automated campaigns.
+- **Online card sales and reloads** — embed a card purchase and reload widget on your website so guests can buy or top up cards before they arrive.
+
+## Prerequisites
+
+Before you begin, make sure you have the following:
+
+- An active Intercard account with API access enabled.
+- Your Intercard **API Key** and **API Secret** (or equivalent credentials provided by your Intercard account manager).
+- Admin access to your Rocket Effect dashboard.
+
+<Note>
+  If you do not have your Intercard API credentials on hand, contact your dedicated Intercard account manager. They can generate or retrieve your API Key and Secret from the Intercard back-office portal.
+</Note>
+
+## Connecting Intercard
+
+<Steps>
+  <Step title="Open the Integrations section">
+    Log in to [rocketeffect.app](https://rocketeffect.app) and navigate to **Settings → Integrations** in the left sidebar.
+  </Step>
+
+  <Step title="Select Intercard">
+    Locate the **Intercard** tile in the integrations list and click **Connect**.
+  </Step>
+
+  <Step title="Enter your API credentials">
+    In the connection dialog, paste your Intercard **API Key** and **API Secret** into the corresponding fields. Double-check for leading or trailing spaces before saving.
+  </Step>
+
+  <Step title="Choose your sync preferences">
+    Select which data sets to pull into Rocket Effect:
+    - Guest profiles and contact information
+    - Card balances
+    - Game play activity
+    - Purchase and transaction history
+
+    Enable all options to get the most complete picture of each guest.
+  </Step>
+
+  <Step title="Save and initiate the first sync">
+    Click **Save & Connect**. Rocket Effect will validate your credentials and begin the initial data sync. Depending on the size of your guest database, the first sync may take a few minutes to complete.
+  </Step>
+
+  <Step title="Confirm the connection">
+    Once the sync finishes, the Intercard tile will show a **Connected** badge and display the timestamp of the last successful sync. You will also see imported guest records appear in the **Guests** section of your dashboard.
+  </Step>
+</Steps>
+
+## What Syncs After Connection
+
+After the integration is active, the following data flows from Intercard into Rocket Effect automatically:
+
+| Data Type | Details |
+|---|---|
+| **Guest Profiles** | Name, contact information, and card number |
+| **Card Balances** | Current credit balance on each guest's card |
+| **Game Play Activity** | Individual game sessions tied to each guest's card |
+| **Purchase History** | Card purchase and reload transactions with dates and amounts |
+
+Syncs run on a scheduled basis after the initial import. Any new guests added in Intercard will appear in Rocket Effect on the next sync cycle.
+
+## Enabling Online Card Sales
+
+With Intercard connected, you can let guests buy new play cards and reload existing ones directly from your website.
+
+1. Go to **Online Sales → Play Cards** in your Rocket Effect dashboard.
+2. Toggle **Enable Online Card Sales** to on.
+3. Copy the provided embed snippet and paste it into your website where you want the card purchase widget to appear.
+4. Optionally configure minimum and maximum reload amounts, and promotional bonuses for new card purchases.
+
+Guests who purchase or reload a card online are automatically recorded in their Rocket Effect guest profile, keeping their history up to date.
+
+## Troubleshooting
+
+<Accordion title="Invalid credentials error on connection">
+  Verify that you have copied the API Key and API Secret exactly as provided — no extra spaces, line breaks, or missing characters. If the error persists, ask your Intercard account manager to regenerate your credentials and try again.
+</Accordion>
+
+<Accordion title="Sync is taking longer than expected">
+  Large guest databases can take additional time on the initial sync. Wait at least 15 minutes before refreshing. If the sync status still shows **In Progress** after 30 minutes, navigate to **Settings → Integrations → Intercard** and click **Force Re-sync**.
+</Accordion>
+
+<Accordion title="Guest records are missing after sync">
+  Ensure that the **Guest Profiles** toggle is enabled in your Intercard sync preferences (step 4 above). If guests are still missing, confirm with your Intercard account manager that your API credentials have read access to the full guest database, not just a single location.
+</Accordion>
+
+<Accordion title="Card balances are not updating">
+  Balance data refreshes on each scheduled sync cycle. If balances appear stale, go to **Settings → Integrations → Intercard** and click **Sync Now** to trigger a manual refresh.
+</Accordion>
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Set Up Online Play Card Sales" icon="credit-card" href="/online-sales/play-cards">
+    Configure your play card purchase and reload widget to start selling online.
+  </Card>
+  <Card title="Guest Profiles" icon="user" href="/concepts/guest-profiles">
+    Learn how synced Intercard data builds rich, actionable guest profiles in Rocket Effect.
+  </Card>
+</CardGroup>

@@ -1,0 +1,156 @@
+---
+title: "Set Up and Manage Rewards and Loyalty Programs"
+sidebarTitle: "Rewards & Loyalty"
+description: "Build lasting guest relationships at your FEC with Rocket Effect loyalty points, VIP tiers, birthday rewards, and win-back automations that run themselves."
+---
+
+One-time visitors become regulars when they have a reason to come back. Rocket Effect's loyalty and rewards system gives you the tools to create that reason — whether it's points that accumulate toward a free game credit, a VIP status that unlocks exclusive perks, or an automated birthday message that arrives at exactly the right moment. This guide walks you through every component of the loyalty system and how to configure each one.
+
+## Loyalty Points
+
+Points are the foundation of your rewards program. Guests earn points through actions at your venue, and they redeem them for credits, discounts, or perks you define.
+
+### How Guests Earn Points
+
+Configure earning rules under **Loyalty → Points → Earning Rules**. You can award points for:
+
+- **Visits** — a flat point award each time a guest uses their card at your venue.
+- **Card Reloads** — points per dollar reloaded onto a play card (e.g., 1 point per $1).
+- **Purchases** — points tied to specific product or package purchases in your integrated POS.
+- **Referrals** — bonus points when a guest refers a new registrant.
+- **Profile Completion** — a one-time bonus for completing their guest profile (birthday, phone number, etc.).
+
+### Point Values and Redemption
+
+Set the redemption rate under **Loyalty → Points → Redemption Settings**:
+
+- Define how many points equal $1 in play credit (e.g., 100 points = $1).
+- Set a **minimum redemption threshold** — guests must accumulate at least this many points before redeeming.
+- Choose whether redemption happens automatically at a threshold, or requires a manual request from the guest through the app or at the counter.
+
+<Note>
+  If your venue uses Intercard, Embed, Sacoa, or another integrated card system, point redemption can push a credit balance directly to the guest's card. Verify this is enabled under **Integrations → [Your Platform] → Loyalty Sync**.
+</Note>
+
+---
+
+## VIP Tiers
+
+VIP tiers reward your most loyal guests with elevated status and exclusive perks. Tiers are assigned automatically based on cumulative points earned or total spend over a rolling or lifetime period.
+
+### Creating Tiers
+
+Go to **Loyalty → VIP Tiers → Manage Tiers** and click **Add Tier**. Configure each tier with the following options:
+
+| Setting | Description |
+|---|---|
+| **Tier Name** | Display name shown to guests (e.g., Silver, Gold, Platinum) |
+| **Threshold** | Minimum lifetime points (or spend) required to reach this tier |
+| **Points Multiplier** | Bonus earning rate for tier members (e.g., 1.5× points per visit) |
+| **Perks** | Free credits, priority booking, exclusive discounts, or custom rewards |
+| **Badge / Icon** | Visual indicator shown on the guest's profile and in emails |
+| **Downgrade Rule** | Whether the guest retains tier status permanently or must re-qualify each year |
+
+Build at least three tiers to create clear aspiration — guests should always feel there's a next level within reach. A common structure for FECs is Silver (entry), Gold (mid), and Platinum (top 5–10% of guests).
+
+---
+
+## Birthday Rewards
+
+Birthday automation delivers a credit, coupon, or special offer to each guest around their birthday — no manual work required after the initial setup.
+
+<Tip>
+  Birthday rewards are consistently the single highest-ROI automation available to FEC operators. Guests who receive a personalized birthday offer convert at 4–6× the rate of standard promotional emails, and the average birthday visit spend is 2–3× a typical visit. Set this up before anything else.
+</Tip>
+
+### Setting Up a Birthday Reward Automation
+
+<Steps>
+  <Step title="Open Birthday Reward Settings">
+    Navigate to **Loyalty → Birthday Rewards** and click **Configure Birthday Automation**.
+  </Step>
+
+  <Step title="Set the Reward Amount and Type">
+    Choose what guests receive:
+
+    - **Play Credit** — a dollar amount credited directly to their card (e.g., $10).
+    - **Bonus Tokens / Points** — a point or token bonus added to their loyalty balance.
+    - **Coupon Code** — a percentage or dollar-off coupon redeemable online or at the counter.
+
+    Enter the reward value and, if applicable, an expiration window (e.g., the credit expires 30 days after the birthday).
+  </Step>
+
+  <Step title="Set the Send Timing">
+    Choose how many days before the guest's birthday the reward is delivered:
+
+    - **0 days** — delivered on the birthday itself.
+    - **3–7 days early** — recommended, as it gives guests time to plan a birthday visit.
+    - **Custom** — enter any number of days in advance.
+  </Step>
+
+  <Step title="Choose the Delivery Channel">
+    Select **Email**, **SMS**, or **Both**. If you select Email, Rocket Effect uses your configured birthday email template (customize it under **Marketing → Email Campaigns → Templates**). If you select SMS, the birthday SMS template is used.
+
+    For maximum reach, enable both channels. Guests who receive both an email and an SMS reminder show a 20–30% higher redemption rate than single-channel delivery.
+  </Step>
+
+  <Step title="Activate the Automation">
+    Toggle the automation to **Active** and save. From this point on, Rocket Effect automatically sends the birthday reward to every eligible guest on the configured schedule — no further action needed.
+  </Step>
+</Steps>
+
+---
+
+## Win-Back Campaigns
+
+Win-back automations re-engage guests who haven't visited in a defined number of days. To set one up:
+
+1. Go to **Marketing → Email Campaigns** (or **SMS Campaigns**) and create a new **Automated Trigger** campaign.
+2. Select **Win-Back** as the trigger type.
+3. Set the inactivity window — for most FECs, 60 or 90 days is a natural re-engagement point.
+4. Write a message that acknowledges the absence and offers a reason to return (e.g., a bonus credit on their next card reload).
+5. Activate the automation.
+
+Guests who make a visit after receiving a win-back message are automatically removed from the win-back sequence until they lapse again.
+
+---
+
+## Family Member Registry
+
+The Family Member Registry lets you track children's birthdays under a parent's guest profile, enabling household-level birthday marketing even when children don't have their own registered cards.
+
+To add a family member:
+
+1. Open a guest profile in **Guests → Guest Profiles**.
+2. Click **Family Members → Add Child**.
+3. Enter the child's name and birthday.
+
+Rocket Effect treats each registered child as an independent birthday trigger. When a child's birthday approaches, the parent receives the birthday communication on the child's behalf, using a configurable child-specific template.
+
+<Note>
+  Family Member Registry works best when paired with a party booking reminder — if the parent also has a party inquiry open, Rocket Effect can surface the birthday reward offer during booking.
+</Note>
+
+---
+
+## Viewing Loyalty Activity
+
+Track the health of your rewards program from the analytics dashboard:
+
+- **Top Guests Leaderboard** — see your highest-point earners, ranked by lifetime points or spend.
+- **Points Balances** — filter guests by current balance to identify those close to a redemption milestone (a great segment for a targeted campaign).
+- **Tier Distribution** — view what percentage of your guest base sits in each VIP tier. If too many guests are at the top tier, consider raising thresholds.
+- **Birthday Campaign Stats** — track how many birthday rewards were sent, redeemed, and what revenue they generated.
+
+Access these reports under **Analytics → Dashboard → Loyalty Overview**.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Guest Profiles" icon="user" href="/concepts/guest-profiles">
+    Understand how guest data is structured, including loyalty point history, tier status, and family member records.
+  </Card>
+  <Card title="Analytics Dashboard" icon="chart-bar" href="/analytics/dashboard">
+    View the loyalty leaderboard, tier distribution, and birthday reward performance in your analytics dashboard.
+  </Card>
+</CardGroup>

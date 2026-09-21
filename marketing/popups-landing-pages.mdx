@@ -1,0 +1,143 @@
+---
+title: "Set Up Popups and Custom Landing Pages"
+sidebarTitle: "Popups & Pages"
+description: "Capture leads and drive conversions with Rocket Effect popups and landing pages — turn website visitors into subscribers, bookers, and paying guests."
+---
+
+Your website is often the first place a potential guest encounters your venue, and Rocket Effect gives you tools to make every visit count. Popups convert anonymous visitors into subscribers by surfacing an offer at the right moment, while custom landing pages give your promotions and campaigns a dedicated destination designed to drive action. This guide covers both tools, plus multi-location targeting and personalization for returning guests.
+
+## Popup System
+
+Popups appear on your connected website and invite visitors to subscribe, claim an offer, or take an action — without requiring them to navigate away from the page they're on.
+
+### Setting Up a Popup
+
+<Steps>
+  <Step title="Create a New Popup">
+    Go to **Marketing → Popups & Pages → Popups** and click **New Popup**. Give the popup an internal name that identifies its purpose (e.g., *Exit Intent — Birthday Party Offer*).
+  </Step>
+
+  <Step title="Choose a Trigger Type">
+    Select when the popup appears to visitors:
+
+    - **Timed** — the popup appears after the visitor has been on the page for a set number of seconds. Use this to let visitors orient themselves before showing an offer.
+    - **Scroll** — the popup triggers when the visitor scrolls a defined percentage down the page. Ideal for content-heavy pages where engaged readers are more likely to convert.
+    - **Exit Intent** — the popup fires when Rocket Effect detects the visitor's cursor moving toward the browser's close or back button. This is your last chance to capture a lead before they leave.
+  </Step>
+
+  <Step title="Configure the Offer and Content">
+    Set the headline, body text, and CTA button label. If you're promoting a discount, link your CTA to the relevant page in your online store or booking flow. Upload a background image or choose a color scheme to match your branding.
+  </Step>
+
+  <Step title="Add a Capture Form">
+    Enable a form to collect visitor information. Choose which fields to show:
+
+    - Email address (required for email marketing opt-in)
+    - Phone number (include SMS consent language if collecting for SMS)
+    - First and last name
+    - Birthday month (useful for birthday marketing)
+
+    All submissions feed directly into your Rocket Effect guest database.
+  </Step>
+
+  <Step title="Set Targeting Rules">
+    Control who sees the popup:
+
+    - **Page Rules** — restrict the popup to specific pages on your site (e.g., only show on the birthday parties page).
+    - **Returning Subscriber Suppression** — hide the popup for visitors who are already subscribed, so existing guests aren't shown a redundant offer.
+    - **Frequency Cap** — set how many times the same visitor can see the popup per session or per day.
+  </Step>
+
+  <Step title="Activate the Popup">
+    Toggle the popup to **Active** and save. If your website uses the Rocket Effect JavaScript snippet, the popup will go live immediately. If you haven't installed the snippet yet, follow the instructions in **Account → Website Integration**.
+  </Step>
+</Steps>
+
+---
+
+## Popups vs. Landing Pages
+
+<Tabs>
+  <Tab title="Popup Setup">
+    Popups are overlays that appear on top of your existing website content. They're best used for:
+
+    - Capturing email and SMS subscribers with a first-visit offer
+    - Promoting a limited-time deal to active browsers
+    - Recovering visitors who are about to leave your site
+
+    **Key popup settings at a glance:**
+
+    | Setting | Options |
+    |---|---|
+    | Trigger | Timed, Scroll, Exit Intent |
+    | Form Fields | Email, Phone, Name, Birthday |
+    | Targeting | Page-specific, subscriber suppression, frequency cap |
+    | Display | Desktop only, mobile only, or both |
+
+    Keep popup copy short — one clear offer, one CTA button, and a visible close option. Visitors who are forced to dig past intrusive popups rarely convert well.
+
+    <Tip>
+      Exit intent popups consistently outperform timed popups for subscriber capture at FECs. Pair an exit popup with a compelling offer — "Get a free $5 play credit when you join our list" — to see opt-in rates of 3–8% of site visitors.
+    </Tip>
+  </Tab>
+
+  <Tab title="Landing Page Setup">
+    Landing pages are standalone pages hosted on your Rocket Effect subdomain (or custom domain) with no navigation links to distract visitors. They're ideal for:
+
+    - Email and SMS campaign destinations
+    - Seasonal promotions (summer packages, holiday parties)
+    - Specific event announcements or waitlist sign-ups
+
+    **Creating a landing page:**
+
+    1. Go to **Marketing → Popups & Pages → Landing Pages** and click **New Landing Page**.
+    2. Choose a **template** — options include promotion, event announcement, lead capture, and party inquiry.
+    3. Use the page editor to add and reorder **content sections**: hero banner, feature highlights, testimonials, pricing table, contact form, or video embed.
+    4. To embed a video, insert a **Video Block** and paste a YouTube or Vimeo URL. The video renders responsively for both desktop and mobile visitors.
+    5. Set the **primary CTA** — the main action you want visitors to take (book a party, reload a card, claim an offer). This CTA appears prominently in the hero section and can be repeated at the bottom of the page.
+    6. Click **Publish** to make the page live. Copy the page URL from the **Settings** tab to use in your campaigns.
+
+    **Connecting landing pages to campaigns:**
+
+    Paste the landing page URL as the destination link in your email CTA button or SMS message. Rocket Effect automatically appends tracking parameters so conversions that originate from a specific campaign are attributed correctly in your analytics reports.
+
+    <Note>
+      If you have a custom domain connected in **Account → Domain Settings**, you can publish landing pages at your own domain (e.g., *promotions.laserzonefc.com*) instead of the default Rocket Effect subdomain.
+    </Note>
+  </Tab>
+</Tabs>
+
+---
+
+## Geographical Targeting for Multi-Location Venues
+
+If you operate multiple FEC locations, you can show different popup offers or landing page content to visitors based on their detected location.
+
+Navigate to **Marketing → Popups & Pages → Geo Targeting** to:
+
+- Assign each popup or landing page to one or more locations.
+- Set a **default** popup or page that displays when a visitor's location cannot be determined.
+- Override geo-targeting at the campaign level if you're running a chain-wide promotion that should appear everywhere.
+
+Location detection is based on the visitor's IP address and is accurate at the city level for most users.
+
+## Dynamic Content for Returning Guests
+
+When a logged-in guest visits a landing page or a page where your Rocket Effect snippet is active, you can display personalized content instead of the generic default:
+
+- **Replace the hero headline** with the guest's first name (e.g., *Welcome back, Jordan!*)
+- **Show a personalized offer** based on the guest's loyalty tier or card balance
+- **Hide the sign-up form** for guests who are already subscribed, replacing it with a direct CTA to reload their card or book an event
+
+Configure dynamic content rules under the **Personalization** tab of any landing page or popup. Each rule specifies an audience condition and the content to display when that condition is met.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Email Campaigns" icon="envelope" href="/marketing/email-campaigns">
+    Link your landing pages as destinations in email campaigns to create a seamless guest journey from inbox to conversion.
+  </Card>
+  <Card title="Discounts & Promotions" icon="tag" href="/online-sales/discounts-promotions">
+    Create the discount codes and promotional offers that power your popup and landing page CTAs.
+  </Card>
+</CardGroup>

@@ -1,0 +1,88 @@
+---
+title: "Understanding Guest Profiles in Rocket Effect"
+sidebarTitle: "Guest Profiles"
+description: "Learn how Rocket Effect builds unified guest profiles from your integrated systems to power targeted marketing and personalized experiences."
+---
+
+Every customer who interacts with your Family Entertainment Center becomes a unified guest profile in Rocket Effect. These profiles consolidate contact information, game play history, purchase records, and card data from all your connected systems into a single, actionable record — giving you a complete picture of each guest without manual data entry.
+
+## How Guest Profiles Are Created
+
+Rocket Effect creates a guest profile automatically whenever a new customer engages with your business through a tracked touchpoint. No manual import is required for most workflows.
+
+A profile is created when a guest:
+
+- **Registers a card** through one of your integrated cashless card systems (Intercard, Embed, or Sacoa)
+- **Books a party or event** through the Rocket Effect booking flow
+- **Opts into a campaign** via email signup, SMS opt-in, or a landing page popup
+
+<Note>
+  Profile data is synced automatically from your connected integrations in real time. Card balances, visit activity, and transaction history update as guests interact with your systems — no manual imports needed.
+</Note>
+
+## Profile Data Fields
+
+Each guest profile captures the following data, drawn from both direct registration and integration sync:
+
+| Field | Source | Description |
+|---|---|---|
+| **Full Name** | Registration / Integration | Guest's first and last name |
+| **Email Address** | Registration / Campaign opt-in | Primary contact for email campaigns |
+| **Phone Number** | Registration / Booking | Used for SMS campaigns and reminders |
+| **Birthday** | Registration | Triggers automated birthday campaigns |
+| **Visit Frequency** | Integration sync | Number of visits over a rolling time period |
+| **Favorite Games** | Integration sync | Games played most often by this guest |
+| **Card Balance** | Integration sync | Current balance on linked play cards |
+| **Spending Totals** | Integration sync | Lifetime and period spend at your center |
+| **Purchase History** | Integration sync | Itemized record of past transactions |
+| **Game Play History** | Integration sync | Session-level gameplay data per visit |
+
+## Using Guest Profiles
+
+### Searching and Filtering Guests
+
+From the **Guests** section of your dashboard, use the search bar to look up any guest by name, email, or phone number. Apply filters to narrow your list by visit frequency, spending range, card type, birthday month, or favorite game category. Filtered lists can be saved as reusable audience segments for campaigns.
+
+### Viewing the Top Customers Leaderboard
+
+The leaderboard surfaces your highest-value guests ranked by visit frequency, total spend, or loyalty points earned. Use it to identify VIP candidates, recognize your most engaged customers, and design exclusive rewards programs for top performers.
+
+### Building Targeted Campaign Audiences
+
+Guest profile data feeds directly into campaign audience targeting. When creating an email or SMS campaign, you can build an audience segment by combining filters — for example, guests who have visited more than five times in the last 90 days and have a card balance below $10. This lets you send the right message to the right guest at the right time.
+
+## The Family Member Registry
+
+The Family Member Registry lets you associate household members — such as children — with a parent or guardian's guest profile. This is especially useful for FECs where the primary card holder is an adult but the child is the actual player.
+
+To add a family member to a profile:
+
+<Steps>
+  <Step title="Open the guest profile">
+    Navigate to **Guests**, search for the parent or guardian, and open their profile.
+  </Step>
+  <Step title="Select Family Members">
+    Scroll to the **Family Members** section and click **Add Family Member**.
+  </Step>
+  <Step title="Enter the child's details">
+    Enter the child's name and birthday. You can add multiple children per profile.
+  </Step>
+  <Step title="Save the record">
+    Click **Save**. Rocket Effect will now include the child's birthday in automated birthday marketing triggers linked to the parent's contact information.
+  </Step>
+</Steps>
+
+<Tip>
+  The Family Member Registry is one of the most effective ways to drive repeat visits. Automated birthday campaigns sent to parents on behalf of their children consistently generate some of the highest redemption rates in FEC marketing.
+</Tip>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Campaigns" icon="megaphone" href="/concepts/campaigns">
+    Learn how to use guest profile data to build targeted email and SMS campaigns.
+  </Card>
+  <Card title="Analytics Dashboard" icon="chart-bar" href="/analytics/dashboard">
+    Explore visit trends, top guests, and spending patterns across your location.
+  </Card>
+</CardGroup>

@@ -1,0 +1,143 @@
+---
+title: "Create and Manage Email Marketing Campaigns"
+sidebarTitle: "Email Campaigns"
+description: "Build targeted email campaigns in Rocket Effect — from one-time blasts to automated triggers — to drive repeat visits and grow revenue at your FEC."
+---
+
+Email marketing is one of the most direct ways to keep your guests engaged between visits. Rocket Effect's campaign builder lets you send personalized messages to your entire guest list or a targeted segment, whether you're promoting a weekend special or automatically celebrating a guest's birthday. This guide walks you through building campaigns, setting up automations, and measuring results.
+
+## Campaign Builder Overview
+
+The email campaign builder lives under **Marketing → Email Campaigns**. From here you can create new campaigns, manage drafts, view active automations, and review performance reports for previously sent messages. Every campaign is tied to your connected guest database, so audience selection and personalization happen without any manual CSV exports.
+
+## Creating an Email Campaign
+
+<Steps>
+  <Step title="Open the Campaign Builder">
+    Navigate to **Marketing → Email Campaigns** and click **New Campaign**. Give your campaign an internal name so you can identify it in reports later — guests never see this name.
+  </Step>
+
+  <Step title="Choose Your Audience">
+    Select who receives the campaign:
+
+    - **All Guests** — sends to every guest in your database who has opted in.
+    - **Filtered Segment** — build a real-time audience using filters such as last visit date, card balance range, loyalty tier, or age group.
+    - **Specific List** — send to a manually curated list you've saved previously, such as a VIP group or event attendees.
+
+    The audience count updates live as you adjust filters, so you always know exactly how many recipients will receive the message.
+  </Step>
+
+  <Step title="Write Your Subject and Body">
+    Enter a **Subject Line** and **Preview Text** (the snippet that appears beneath the subject in most inboxes). In the body editor, you can:
+
+    - Format text with headings, bold, and bullet lists
+    - Insert **personalization tokens** (see [Personalization Tokens](#personalization-tokens) below)
+    - Upload or select images from your media library
+    - Add **Call-to-Action buttons** linked to your online sales pages, booking page, or any custom URL
+  </Step>
+
+  <Step title="Add Images and CTAs">
+    Click **Insert Image** to upload a banner or select a previously uploaded asset. For CTA buttons, click **Add Button**, enter the button label (e.g., *Reload Your Card*), and paste the destination URL. You can add multiple CTAs at different points in the email body.
+  </Step>
+
+  <Step title="Set the Campaign Type and Schedule">
+    Choose between a **One-Time Blast** or an **Automated Trigger** campaign — see [Campaign Types](#campaign-types) for details on each. Then set your send time using the scheduling options in the next section.
+  </Step>
+
+  <Step title="Review and Send">
+    Click **Preview** to see a rendered version of your email, then send a **Test Email** to your own address to verify formatting and links. When everything looks right, click **Send** or **Schedule** to launch the campaign.
+  </Step>
+</Steps>
+
+## Campaign Types
+
+<Tabs>
+  <Tab title="One-Time Blast">
+    A one-time blast is a single send to your chosen audience. Use blasts for:
+
+    - Limited-time promotions and seasonal events
+    - New attraction or menu announcements
+    - Holiday greetings
+
+    **Scheduling options for blasts:**
+
+    - **Send Immediately** — the campaign sends as soon as you click confirm.
+    - **Schedule for Later** — pick a specific date and time. Rocket Effect converts the time to your venue's local timezone automatically.
+
+    One-time blasts are not repeatable by default — if you want to reuse the content, duplicate the campaign and adjust the audience and schedule as needed.
+  </Tab>
+
+  <Tab title="Automated Trigger">
+    Automated campaigns send to individual guests when they meet a defined condition, without any manual action on your part. Available trigger types:
+
+    | Trigger | When It Fires |
+    |---|---|
+    | **Birthday** | A set number of days before or on the guest's birthday |
+    | **Win-Back** | After a guest hasn't visited for a configurable number of days |
+    | **Post-Visit** | A set number of hours after a guest's card is used |
+    | **Low Balance** | When a play card balance drops below a threshold you define |
+
+    **Setting up an automation:**
+
+    1. Select **Automated Trigger** as the campaign type.
+    2. Choose the trigger event and configure its timing (e.g., *3 days before birthday*).
+    3. Set the audience scope — automations typically run against **All Guests** but can be filtered to a segment (e.g., loyalty tier).
+    4. Toggle the automation **Active**. It will now fire continuously as guests meet the trigger condition.
+
+    You can pause or edit an active automation at any time without losing its send history.
+
+    <Tip>
+      Birthday automation is the single easiest win in email marketing for FECs. Enable it with a modest offer — even a free game credit — and watch redemption rates climb. Most venues see a 3–5× higher open rate on birthday emails compared to standard blasts.
+    </Tip>
+  </Tab>
+</Tabs>
+
+## Personalization Tokens
+
+Insert dynamic content into your subject line or body by clicking the **{ }** token button in the editor. Available tokens include:
+
+| Token | Output |
+|---|---|
+| `{{first_name}}` | Guest's first name |
+| `{{card_balance}}` | Current play card balance |
+| `{{loyalty_points}}` | Current loyalty point total |
+| `{{loyalty_tier}}` | Guest's VIP tier name (e.g., Gold) |
+| `{{birthday_offer}}` | The configured birthday credit or coupon value |
+
+Tokens resolve at send time, so each recipient sees their own personalized values. If a token has no value for a given guest (e.g., a guest with no card balance on file), it renders as a blank string by default — always preview with a test account that has complete data.
+
+## Deliverability Best Practices
+
+Good deliverability starts with proper sender configuration:
+
+- **From Name** — use your venue name (e.g., *Laser Zone FEC*) rather than a personal name, so guests recognize the sender immediately.
+- **From Address** — set a branded domain address (e.g., *hello@laserzonefc.com*) under **Account → Email Settings**. Avoid generic addresses like Gmail or Yahoo, which are more likely to be filtered as spam.
+- **Unsubscribe Management** — Rocket Effect automatically appends an unsubscribe link to every campaign. Guests who unsubscribe are suppressed from all future campaigns. Never attempt to re-add unsubscribed guests manually.
+- **List Hygiene** — regularly review bounce reports and remove hard-bounced addresses. Sending repeatedly to invalid addresses damages your sender reputation.
+
+<Note>
+  If you're setting up a custom from domain for the first time, add the DNS records shown in **Account → Email Settings → Domain Authentication** before sending your first campaign. Authentication typically takes up to 48 hours to propagate.
+</Note>
+
+## Reviewing Campaign Results
+
+After a campaign sends, click its name in the campaign list to open the results report. Key metrics include:
+
+- **Delivered** — number of emails successfully accepted by recipient mail servers
+- **Open Rate** — percentage of delivered emails that were opened at least once
+- **Click Rate** — percentage of opened emails where the recipient clicked at least one link
+- **Conversions** — tracked actions after click (play card reloads, bookings, or purchases) tied back to the campaign via tracked links
+- **Unsubscribes** — guests who opted out after receiving this specific campaign
+
+For deeper analysis of trends across multiple campaigns, visit the **Analytics** section.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="SMS Campaigns" icon="message-sms" href="/marketing/sms-campaigns">
+    Reach guests directly on their phones with targeted text messages and automated SMS triggers.
+  </Card>
+  <Card title="Campaign Performance" icon="chart-line" href="/analytics/campaign-performance">
+    Analyze open rates, click rates, and conversions across all your email and SMS campaigns.
+  </Card>
+</CardGroup>

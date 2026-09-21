@@ -1,0 +1,113 @@
+---
+title: "Connect Sacoa to Rocket Effect (Full Guide)"
+sidebarTitle: "Sacoa"
+description: "Sync Sacoa cardholder data, balances, and play history with Rocket Effect to enable online card sales and targeted guest marketing."
+---
+
+Sacoa is a leading debit card and cashless payment system trusted by amusement parks, arcades, and family entertainment centers around the world. Connecting Sacoa to Rocket Effect brings your guests' card records, balances, and play activity into one place — giving your marketing team the data it needs to run personalized campaigns, automate loyalty rewards, and sell or reload cards through your website without any manual data handling.
+
+## What the Integration Enables
+
+Linking your Sacoa account unlocks the following capabilities inside Rocket Effect:
+
+- **Unified guest card records** — Sacoa card holders are imported and matched to Rocket Effect guest profiles.
+- **Card balance visibility** — see each guest's current Sacoa balance alongside their marketing and loyalty data.
+- **Play history for segmentation** — target guests based on visit frequency, last visit date, and total spend.
+- **Online card purchases and reloads** — give guests a convenient way to buy new cards or add credits before they arrive, directly from your website.
+
+## Prerequisites
+
+Before you start, make sure you have:
+
+- An active Sacoa account (cloud platform or on-premise installation).
+- Your Sacoa **integration credentials** — typically an API key or a username/password pair provided by Sacoa.
+- Admin access to your Rocket Effect dashboard.
+
+<Note>
+  The Sacoa integration supports both the **Sacoa cloud platform** and **on-premise Sacoa installations**. The connection steps are the same for both; however, on-premise customers may need to work with their IT team or Sacoa representative to ensure external API access is enabled on their local Sacoa server before proceeding.
+</Note>
+
+## Connecting Sacoa
+
+<Steps>
+  <Step title="Open the Integrations section">
+    Log in to [rocketeffect.app](https://rocketeffect.app) and navigate to **Settings → Integrations** from the left sidebar.
+  </Step>
+
+  <Step title="Select Sacoa">
+    Find the **Sacoa** tile in the integrations list and click **Connect**.
+  </Step>
+
+  <Step title="Enter your integration credentials">
+    Input your Sacoa API key or login credentials in the provided fields. If you are on an on-premise installation, also enter the server endpoint URL supplied by your IT team or Sacoa support.
+  </Step>
+
+  <Step title="Choose your sync preferences">
+    Select which data to pull from Sacoa into Rocket Effect:
+    - Guest card records and contact information
+    - Card balances
+    - Game play activity
+
+    Enable all available options to build the richest possible guest profiles for marketing segmentation.
+  </Step>
+
+  <Step title="Save and start the first sync">
+    Click **Save & Connect**. Rocket Effect will verify your credentials and begin importing your Sacoa guest data. The initial sync duration depends on your database size — allow a few minutes for larger installations.
+  </Step>
+
+  <Step title="Confirm the connection">
+    After the sync completes, the Sacoa tile will show a **Connected** badge and display the last sync timestamp. Imported guest records will be visible in the **Guests** section of your Rocket Effect dashboard.
+  </Step>
+</Steps>
+
+## Data That Syncs
+
+Once connected, the following Sacoa data flows into Rocket Effect automatically on a scheduled basis:
+
+| Data Type | Details |
+|---|---|
+| **Guest Card Records** | Name, contact details, and Sacoa card number |
+| **Card Balances** | Current credit balance for each guest's Sacoa card |
+| **Game Play Activity** | Individual play sessions linked to each guest's card |
+
+New card holders registered in Sacoa will be picked up and imported during the next scheduled sync.
+
+## Enabling Online Card Sales
+
+After connecting Sacoa, you can allow guests to purchase new cards or reload their existing Sacoa balances directly from your website.
+
+1. Go to **Online Sales → Play Cards** in your Rocket Effect dashboard.
+2. Toggle **Enable Online Card Sales** to on.
+3. Copy the widget embed code and paste it into your website where you want the card sales module to appear.
+4. Configure available purchase amounts, reload increments, and any bonus credit offers for new card buyers.
+
+All online transactions are captured in the guest's Rocket Effect profile, keeping their card and purchase history current.
+
+## Troubleshooting
+
+<Accordion title="Credentials are not accepted during connection">
+  Double-check that you have entered your Sacoa credentials exactly as provided, with no leading or trailing spaces. On-premise customers should also verify that the server endpoint URL is correct and that the Sacoa server is reachable from the internet. Contact Sacoa support if you need help confirming external API access.
+</Accordion>
+
+<Accordion title="Sync is running slowly or appears stuck">
+  Large guest databases can require additional time on the first import. Wait at least 15 minutes before taking action. If the sync still shows **In Progress** after 30 minutes, go to **Settings → Integrations → Sacoa** and click **Force Re-sync** to restart the import.
+</Accordion>
+
+<Accordion title="Card balances are not current">
+  Balances are refreshed on each scheduled sync cycle. To pull the latest data immediately, navigate to **Settings → Integrations → Sacoa** and click **Sync Now**.
+</Accordion>
+
+<Accordion title="Some guests are missing from Rocket Effect">
+  Confirm that the **Guest Card Records** option is enabled in your sync preferences. On-premise Sacoa customers should also verify with their IT team that the API has read access to the complete guest database rather than a single register or location.
+</Accordion>
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Set Up Online Play Card Sales" icon="credit-card" href="/online-sales/play-cards">
+    Configure the play card widget so guests can buy and reload Sacoa cards from your website.
+  </Card>
+  <Card title="Connect Intercard" icon="plug" href="/integrations/intercard">
+    Also using Intercard? Follow the same quick steps to connect that system too.
+  </Card>
+</CardGroup>

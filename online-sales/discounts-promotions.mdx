@@ -1,0 +1,103 @@
+---
+title: "Create Discounts and Promotions in Rocket Effect"
+sidebarTitle: "Discounts & Promos"
+description: "Build coupon codes, bonus credit offers, and time-limited deals to attract guests and increase spend. Distribute through campaigns, popups, and direct sharing."
+---
+
+Promotions give you a direct lever to drive urgency, reward loyal guests, and bring new visitors through your doors. Rocket Effect lets you create a full range of discount types — from simple percentage-off coupons to bonus card credit bundles — and distribute them through any marketing channel you use, all from one place.
+
+## Types of Promotions
+
+Rocket Effect supports four promotion types you can mix and match depending on your goal:
+
+| Promotion Type | How It Works | Best Used For | Key Config Options |
+|---|---|---|---|
+| **Percentage Discount** | Reduces the total by a set percentage | Broad seasonal sales, first-time visit incentives | Percentage amount, min purchase value, expiry date |
+| **Fixed Dollar Discount** | Deducts a specific dollar amount | Targeted offers with a clear value, upsell thresholds | Dollar amount, min purchase value, single or multi-use |
+| **Bonus Card Credits** | Guest buys a card value and receives extra credits free (e.g., buy $50, get $10 free) | Increasing average transaction value, reloadable card promotions | Base amount, bonus amount, eligible card types |
+| **Time-Limited Deal** | Any discount type active only during a defined window | Flash sales, holiday weekends, slow-day drives | Start date/time, end date/time, countdown display option |
+
+## Create a Coupon
+
+<Steps>
+  <Step title="Open the Promotions Builder">
+    Navigate to **Online Sales → Discounts & Promotions** and click **Create Promotion**. Give your promotion an internal name that makes it easy to identify in reports — guests never see this label.
+  </Step>
+
+  <Step title="Choose a Promotion Type">
+    Select one of the four promotion types from the dropdown: **Percentage Discount**, **Fixed Dollar Discount**, **Bonus Card Credits**, or **Time-Limited Deal**. Your selection determines which configuration fields appear in the next steps.
+  </Step>
+
+  <Step title="Set the Discount Amount">
+    Enter the discount value:
+    - For percentage discounts, enter the percentage (for example, `15` for 15% off).
+    - For fixed dollar discounts, enter the dollar amount (for example, `10` for $10 off).
+    - For bonus card credits, enter the base purchase amount and the bonus credit amount (for example, base `$50`, bonus `$10`).
+
+    Optionally set a **Minimum Purchase Value** to ensure the discount only applies when a guest spends above a threshold.
+  </Step>
+
+  <Step title="Create a Coupon Code">
+    Toggle **Require Coupon Code** to on and enter the code guests will use at checkout (for example, `SUMMER25`). Codes are case-insensitive and can include letters and numbers. Leave this toggle off if you want the promotion to apply automatically without a code.
+  </Step>
+
+  <Step title="Set the Expiry Date and Usage Limits">
+    Define when the promotion ends by setting an **Expiry Date**. Then set usage limits to control how widely the discount is used:
+    - **Total Redemption Limit** — the maximum number of times the coupon can be used across all guests.
+    - **Per-Guest Limit** — how many times a single guest account can redeem the coupon.
+
+    Leave either field blank to allow unlimited use.
+  </Step>
+
+  <Step title="Restrict the Audience (Optional)">
+    Expand the **Audience Restrictions** section to limit who can redeem the promotion:
+    - **Loyalty Tier** — restrict to guests in a specific VIP or rewards tier.
+    - **New Guests Only** — allow only guests who have never made a purchase through Rocket Effect.
+    - **Specific Locations** — if you operate multiple venues, limit the promotion to selected locations.
+    - **Date and Time Windows** — restrict redemption to certain days or hours (for example, weekdays only, or after 4 PM).
+  </Step>
+
+  <Step title="Save and Activate">
+    Review your settings and click **Save & Activate**. The promotion is immediately live. Copy the coupon code or the direct promotion link from the confirmation screen to begin distributing it.
+  </Step>
+</Steps>
+
+## Distribute Your Promotions
+
+Once a promotion is active, use any of these channels to get it in front of guests:
+
+- **Email Campaigns** — insert the coupon code or a "Claim Offer" button directly into any email campaign under **Marketing → Email Campaigns**.
+- **SMS Campaigns** — include the code and a short link in an SMS blast or automated trigger message under **Marketing → SMS Campaigns**.
+- **Popups and Landing Pages** — feature the promotion in an exit-intent popup or a dedicated landing page built in **Marketing → Popups & Landing Pages**.
+- **Direct Share** — copy the unique promotion URL from the promotion detail page and share it on social media, in your Google Business Profile, or as a QR code at your venue.
+
+<Tip>
+  Pairing a discount with a targeted campaign dramatically improves conversion rates. For example, send a "We miss you" email to guests who haven't visited in 60 days and include a 20% off coupon with a 7-day expiry. The limited window creates urgency, and the personal targeting makes the offer feel exclusive rather than blanket.
+</Tip>
+
+## Track Redemption and Revenue Impact
+
+All promotion activity is logged in **Analytics → Dashboard** under the **Promotions** panel. For each active or past promotion you can view:
+
+- **Total Redemptions** — how many times the coupon was used
+- **Unique Guests** — number of individual guests who redeemed it
+- **Revenue Generated** — total transaction value attributed to the promotion
+- **Discount Given** — total dollar value discounted across all redemptions
+- **Net Revenue** — revenue generated minus discount given
+
+Use the **Campaign Performance** report to see how promotions distributed through email or SMS performed compared to organic or direct redemptions.
+
+<Warning>
+  Deactivating a promotion immediately prevents any new redemptions, even if guests have already received the coupon code. If you need to phase out a promotion gracefully, set an expiry date instead of manually deactivating it.
+</Warning>
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Email Campaigns" icon="envelope" href="/marketing/email-campaigns">
+    Embed coupon codes in automated or one-time email campaigns to reach the right guests at the right moment.
+  </Card>
+  <Card title="Rewards & Loyalty" icon="star" href="/marketing/rewards-loyalty">
+    Combine promotions with your loyalty program to reward high-value guests and incentivize repeat visits.
+  </Card>
+</CardGroup>

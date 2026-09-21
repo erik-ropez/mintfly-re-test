@@ -1,30 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
+  "projectType": "saas",
+  "projectName": "Rocket Effect",
+  "projectDescription": "A sales and marketing automation platform built for Family Entertainment Centers (FECs) that enables online sales, party booking, loyalty programs, and targeted marketing campaigns through deep integrations with industry-leading POS and card systems.",
   "theme": "almond",
-  "name": "Rocket Effect",
-  "colors": {
-    "primary": "#ef3249",
-    "light": "#eb1c24",
-    "dark": "#040404"
-  },
-  "favicon": "https://media.brand.dev/4cbcf176-a2de-4e52-bdbb-41dda9598551.webp",
-  "logo": {
-    "light": "https://media.brand.dev/ced6e1fe-a8d1-427e-8980-594caeb27207.svg",
-    "dark": "https://media.brand.dev/ced6e1fe-a8d1-427e-8980-594caeb27207.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@rocketeffect.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Sign In",
-      "href": "https://rocketeffect.app"
-    }
-  },
+  "primaryColor": "#ef3249",
+  "lightColor": "#eb1c24",
+  "darkColor": "#040404",
   "navigation": {
     "tabs": [
       {
@@ -99,10 +80,28 @@
       }
     ]
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/rocketeffect",
-      "linkedin": "https://linkedin.com/company/rocketeffect"
-    }
-  }
+  "keyFeatures": [
+    "Online play card sales and card balance management",
+    "Gift card purchasing and tracking",
+    "Party and event booking with digital waivers",
+    "Automated email and SMS marketing campaigns",
+    "Unified guest profiles with game play history",
+    "Loyalty and rewards programs (birthday credits, VIP, loyalty points)",
+    "Discounts, coupons, and promotional management",
+    "Custom landing pages and popup conversion tools",
+    "Geographical targeting and dynamic website content",
+    "Personalized analytics dashboard with campaign and conversion tracking",
+    "Integrations with Intercard, Embed, Sacoa, Brunswick (Meriq), Clubspeed, RTS"
+  ],
+  "publicApiSurface": [
+    "Guest profile data (unified customer record)",
+    "Campaign creation and scheduling (email, SMS)",
+    "Online card sales (play cards, gift cards)",
+    "Party booking management (create, edit, cancel, reschedule)",
+    "Discount and coupon configuration",
+    "Analytics dashboard (campaign performance, conversion rates, leads)",
+    "Integration connectors (Intercard, Embed, Sacoa, Brunswick, Clubspeed, RTS)",
+    "Popup and landing page builder",
+    "Rewards program configuration (loyalty points, VIP tiers, birthday credits)"
+  ]
 }

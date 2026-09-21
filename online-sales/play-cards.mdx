@@ -1,0 +1,78 @@
+---
+title: "Sell & Manage Play Cards Online with Rocket Effect"
+sidebarTitle: "Play Cards"
+description: "Enable online play card sales and reloads for your FEC. Connect your card system, configure denominations, and let guests manage their cards from your website."
+---
+
+Rocket Effect lets your guests purchase and reload cashless game cards directly from your website — no staff interaction required. Whether you use Intercard, Embed, or Sacoa, you can turn your card system into a 24/7 revenue channel by embedding a seamless online sales experience into your existing site.
+
+<Note>
+  Online play card sales require an active card system integration. Rocket Effect supports **Intercard**, **Embed**, and **Sacoa**. Connect your integration before enabling the eCommerce widget. See [Integrations Overview](/concepts/integrations-overview) for setup details.
+</Note>
+
+## How Play Cards Work
+
+Play cards are reloadable, cashless game cards that guests tap or swipe at arcade and attraction terminals. Instead of handling coins or tokens, guests load a dollar amount onto their card and spend it across your venue. With Rocket Effect, guests can purchase a new card or reload an existing one online at any time — increasing convenience and encouraging higher pre-loaded balances.
+
+## Set Up Online Play Card Sales
+
+<Steps>
+  <Step title="Connect Your Card System Integration">
+    Navigate to **Settings → Integrations** and select your card system provider (Intercard, Embed, or Sacoa). Enter your API credentials and save. Rocket Effect will sync your card system's denomination options and guest card data automatically.
+
+    Confirm the integration status shows **Connected** before proceeding.
+  </Step>
+
+  <Step title="Enable the eCommerce Widget">
+    Go to **Online Sales → Play Cards** and toggle **Enable Online Card Sales** to on. Rocket Effect generates an embeddable widget you can place on any page of your website.
+
+    Copy the embed code snippet from the **Widget Code** tab and paste it into your website's HTML where you want the purchase flow to appear. The widget is fully responsive and works on mobile and desktop browsers.
+  </Step>
+
+  <Step title="Configure Card Denominations">
+    Under **Online Sales → Play Cards → Denominations**, click **Add Denomination** to define the dollar amounts guests can choose from. You can add as many fixed amounts as you like (for example, $10, $20, $50, $100) or enable a **Custom Amount** field so guests can enter their own value within a minimum and maximum range you set.
+
+    Click **Save Denominations** when finished. Changes appear in the widget immediately.
+  </Step>
+
+  <Step title="Enable Card Registration">
+    To let guests link a physical card to their digital profile, go to **Online Sales → Play Cards → Card Registration** and toggle **Allow Card Registration** to on. Guests will be prompted to enter their card number during the checkout flow or from their account dashboard, enabling them to reload and check balances online at any time.
+  </Step>
+
+  <Step title="Enable the Balance-Check Widget">
+    Go to **Online Sales → Play Cards → Balance Check** and toggle **Enable Balance Widget** to on. Copy the separate balance-check embed code and place it anywhere on your site — a dedicated "Check My Balance" page works well. Guests enter their card number to view their current balance without logging in.
+  </Step>
+
+  <Step title="Configure Payment Processing">
+    Navigate to **Settings → Payments** to confirm your payment gateway is active. Rocket Effect processes online card sales through your connected gateway using TLS encryption and PCI-compliant tokenization — card numbers are never stored on Rocket Effect servers.
+
+    Accepted payment methods include major credit and debit cards (Visa, Mastercard, Amex, Discover) and, where supported by your gateway, digital wallets such as Apple Pay and Google Pay.
+  </Step>
+
+  <Step title="Go Live and Promote">
+    Publish the widget pages on your website and test a purchase end-to-end using a small denomination. Verify the card balance updates in your card system before announcing the feature to guests.
+
+    Once confirmed, add a prominent link or banner to your homepage and announce the new online reload option via email and SMS campaigns.
+  </Step>
+</Steps>
+
+## Manage Online Card Sales
+
+All online play card transactions appear in **Analytics → Dashboard** under the **Online Sales** panel. You can filter by date range, denomination, and transaction type (new card vs. reload) to understand purchasing patterns. Click any transaction to view the guest profile, card number, and payment details.
+
+For a full breakdown of revenue and volume trends, visit the **Analytics → Campaign Performance** section after running promotional campaigns tied to card sales.
+
+<Tip>
+  Promote online reloads through automated post-visit email campaigns. Guests who receive a "Top up your card before your next visit" message within 48 hours of a visit reload at significantly higher rates. Set this up under **Marketing → Email Campaigns** using the **Post-Visit** trigger.
+</Tip>
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Gift Cards" icon="gift" href="/online-sales/gift-cards">
+    Offer digital and physical gift cards for birthdays, holidays, and special occasions — all managed from Rocket Effect.
+  </Card>
+  <Card title="Intercard Integration" icon="plug" href="/integrations/intercard">
+    Connect your Intercard system to enable online card sales, balance syncing, and guest card registration.
+  </Card>
+</CardGroup>

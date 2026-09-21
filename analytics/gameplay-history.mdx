@@ -1,0 +1,120 @@
+---
+title: "Gameplay History: Turn Play Data Into Smarter Marketing"
+sidebarTitle: "Gameplay History"
+description: "See exactly which games each guest plays, spot your most popular attractions, and build precisely targeted campaigns from real gameplay behavior."
+---
+
+Gameplay history gives you a granular record of how your guests actually interact with your FEC floor. By pulling transaction-level data from your connected card system, Rocket Effect shows you which games each registered guest has played, how frequently they return to specific attractions, and how much they spend per game. You can use this data to personalize marketing campaigns, optimize your floor layout, and identify machines that need attention before they cost you revenue.
+
+<Note>
+  Gameplay history is only available when your Rocket Effect account is connected to a supported card system — **Intercard**, **Embed**, or **Sacoa**. If you have not yet completed your integration, visit the relevant setup guide before using this feature.
+</Note>
+
+## What Gameplay History Includes
+
+For each registered guest, Rocket Effect records:
+
+- **Games played** — the specific game or attraction name as reported by your card system
+- **Play count** — how many times the guest has played that game across all visits
+- **Spend per game** — total credits or dollar value attributed to that game for the guest
+- **Last played date** — the most recent session in which the guest played that game
+
+Data is synced from your card system on a scheduled basis. The frequency depends on your integration — Intercard and Embed sync in near real-time, while Sacoa syncs on a nightly schedule.
+
+## Viewing Gameplay Data on a Guest Profile
+
+<Steps>
+  <Step title="Open Guest Profiles">
+    From the left sidebar, navigate to **Guests → All Guests**.
+  </Step>
+  <Step title="Search for a guest">
+    Use the search bar to find a guest by name, email, or phone number, then click their name to open their profile.
+  </Step>
+  <Step title="Select the Gameplay tab">
+    On the guest profile, click the **Gameplay** tab to see the full list of games that guest has played, along with play counts, spend, and last-played dates.
+  </Step>
+</Steps>
+
+## Aggregate Game Popularity Report
+
+Beyond individual profiles, Rocket Effect compiles gameplay data across all guests into an aggregate popularity report — useful for floor planning, maintenance scheduling, and understanding which attractions drive the most engagement.
+
+<Steps>
+  <Step title="Navigate to Gameplay History">
+    From the left sidebar, go to **Analytics → Gameplay History**.
+  </Step>
+  <Step title="Select the Aggregate view">
+    Click **All Games** at the top of the page to switch from the per-guest view to the aggregate report.
+  </Step>
+  <Step title="Sort and filter">
+    Sort by **Total Plays**, **Unique Players**, or **Total Revenue** to rank your games. Apply a date range filter to see performance for a specific period.
+  </Step>
+  <Step title="Export if needed">
+    Click **Export CSV** to download the full ranked list for use in floor planning discussions or maintenance logs.
+  </Step>
+</Steps>
+
+## Using Gameplay Data for Targeted Campaigns
+
+Gameplay history is one of the most powerful audience segmentation tools in Rocket Effect. Instead of sending the same promotion to every guest, you can target guests based on the specific games they love — dramatically increasing relevance and conversion rates.
+
+| Game / Attraction | Audience Segment | Campaign Idea |
+|---|---|---|
+| Laser Tag | Guests who played laser tag 3+ times in the last 90 days | "Laser Tag loyalty reward — earn double points this weekend" |
+| Go-Karts | Guests with highest go-kart spend | "VIP Kart Pass: unlimited laps for one month" |
+| Redemption games | Guests who frequently play ticket games | "Bonus tickets loaded to your card — this week only" |
+| Mini Golf | Guests who played mini golf but haven't visited in 60+ days | Win-back campaign: "We miss you — free round of mini golf inside" |
+| Bowling | First-time bowlers | "Loved your first game? Book a lane for your next party" |
+| Arcade classics | High-frequency arcade players | "New games just arrived — be the first to play" |
+
+<Steps>
+  <Step title="Create a new audience segment">
+    Go to **Guests → Segments** and click **New Segment**.
+  </Step>
+  <Step title="Add a gameplay condition">
+    In the segment builder, click **Add Condition**, then select **Gameplay** from the condition category dropdown. Choose a specific game name, a play-count threshold, and a time window (e.g., "played laser tag at least 3 times in the last 90 days").
+  </Step>
+  <Step title="Save the segment">
+    Name your segment descriptively (e.g., "Laser Tag Loyalists – 90 days") and click **Save**.
+  </Step>
+  <Step title="Use the segment in a campaign">
+    When building an email or SMS campaign, select your new gameplay-based segment as the target audience. Only guests who match the gameplay criteria will receive the message.
+  </Step>
+</Steps>
+
+## Identifying At-Risk Games
+
+Low-engagement games represent either a floor placement problem, a maintenance issue, or an awareness gap. Rocket Effect's aggregate report makes these easy to spot.
+
+<Steps>
+  <Step title="Open the Aggregate Gameplay report">
+    Go to **Analytics → Gameplay History → All Games** and sort by **Total Plays** ascending.
+  </Step>
+  <Step title="Review the bottom of the list">
+    Games at the bottom with consistently low play counts over the last 30–90 days are candidates for intervention.
+  </Step>
+  <Step title="Investigate each low-performer">
+    For each low-engagement game, consider:
+    - Is the machine in a low-traffic area of the floor?
+    - Has it recently needed repair or been out of service?
+    - Have you promoted it to guests who play similar games?
+  </Step>
+  <Step title="Take action">
+    Use your findings to prioritize floor relocations, schedule maintenance, or create a targeted campaign to drive awareness (e.g., "Have you tried our new racing simulator?").
+  </Step>
+</Steps>
+
+<Tip>
+  Combine the at-risk games report with your guest segments. If a game has low aggregate plays but a small group of loyal fans, those guests are ideal candidates for a "bring a friend" promotion — they already love the game and can help evangelize it to new players.
+</Tip>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Guest Profiles" icon="user" href="/concepts/guest-profiles">
+    Learn how Rocket Effect builds unified guest profiles from card system data, bookings, and campaign interactions.
+  </Card>
+  <Card title="Intercard Integration" icon="credit-card" href="/integrations/intercard">
+    Connect your Intercard system to start syncing gameplay history and unlocking data-driven segmentation.
+  </Card>
+</CardGroup>

@@ -1,0 +1,116 @@
+---
+title: "Connect Embed to Rocket Effect (Full Guide)"
+sidebarTitle: "Embed"
+description: "Pull Embed guest card data, balances, and play history into Rocket Effect to fuel personalized marketing and online card sales."
+---
+
+Embed is a cloud-based cashless card and point-of-sale system built for entertainment centers and arcades. Connecting Embed to Rocket Effect lets you draw on your guests' card balances, game activity, and transaction records to power segmented email and SMS campaigns, automate birthday and re-engagement messages, and sell or reload cards directly through your website — all without leaving Rocket Effect.
+
+## What the Integration Enables
+
+Once you link your Embed account, Rocket Effect gains access to:
+
+- **Guest card records** — Embed card holders are imported as guest profiles inside Rocket Effect.
+- **Card balances** — see each guest's current balance alongside their marketing engagement.
+- **Game and play activity** — filter and target guests based on how often and how recently they play.
+- **Transaction history** — use card purchase and reload data to identify your highest-value guests.
+- **Online card sales** — let guests buy new cards or reload existing balances through your website.
+
+## Prerequisites
+
+Before connecting Embed, confirm you have:
+
+- An active Embed account with API access enabled.
+- Your Embed **API credentials** (API key or access token, depending on your Embed plan).
+- Admin access to your Rocket Effect dashboard.
+
+<Tip>
+  Not sure where to find your Embed API credentials? Reach out to **Embed support** at [embedcard.com](https://embedcard.com) — their team can point you to the correct credentials in your Embed back-office or generate new API access for your account.
+</Tip>
+
+## Connecting Embed
+
+<Steps>
+  <Step title="Open the Integrations section">
+    Log in to [rocketeffect.app](https://rocketeffect.app) and go to **Settings → Integrations** from the left sidebar.
+  </Step>
+
+  <Step title="Select Embed">
+    Find the **Embed** tile in the integrations list and click **Connect**.
+  </Step>
+
+  <Step title="Enter your API credentials">
+    Paste your Embed API key or access token into the credential field. If your Embed setup requires an additional site or location ID, enter that as well. Avoid trailing spaces when pasting.
+  </Step>
+
+  <Step title="Choose your sync preferences">
+    Select the data you want Rocket Effect to pull from Embed:
+    - Guest records and contact information
+    - Card balances
+    - Game play activity
+    - Transaction history
+
+    Enabling all categories gives your marketing segments the most complete data set to work with.
+  </Step>
+
+  <Step title="Save and initiate the first sync">
+    Click **Save & Connect**. Rocket Effect will authenticate your credentials and kick off the initial data import. The first sync may take several minutes depending on your guest database size.
+  </Step>
+
+  <Step title="Confirm the connection">
+    When the sync completes, the Embed tile will display a **Connected** badge along with the last sync timestamp. Imported guests will appear in the **Guests** section of your dashboard.
+  </Step>
+</Steps>
+
+## Data That Syncs
+
+After connection, the following information flows from Embed into Rocket Effect on a scheduled basis:
+
+| Data Type | Details |
+|---|---|
+| **Guest Records** | Name, email, phone number, and linked card number |
+| **Card Balances** | Real-time credit balance for each guest's card |
+| **Game Activity** | Individual play sessions attributed to each card |
+| **Transaction History** | Card purchase and reload events with dates and amounts |
+
+New guests added in Embed will be imported automatically on the next scheduled sync cycle.
+
+## Enabling Online Card Sales
+
+With the Embed integration active, you can give guests the ability to buy new cards or top up their balances from your website.
+
+1. Navigate to **Online Sales → Play Cards** in your Rocket Effect dashboard.
+2. Toggle **Enable Online Card Sales** to on.
+3. Copy the embed widget snippet and add it to the relevant page on your website.
+4. Set your desired purchase amounts, reload increments, and any bonus credit promotions.
+
+All online transactions are recorded against the guest's Rocket Effect profile, keeping their history accurate and up to date.
+
+## Troubleshooting
+
+<Accordion title="Credential error during connection">
+  Confirm your API key or token is copied exactly as shown in the Embed back-office. If the error persists after re-pasting, contact Embed support to verify that API access is enabled for your account and that your credentials have not expired.
+</Accordion>
+
+<Accordion title="Guest data is missing after sync">
+  Check that the **Guest Records** toggle is enabled in your sync preferences (step 4 above). Also confirm with Embed support that your API credentials have access to the full guest database, particularly if you operate multiple locations.
+</Accordion>
+
+<Accordion title="Re-syncing guest records">
+  If you suspect guest data is out of date, go to **Settings → Integrations → Embed** and click **Sync Now** to trigger a manual refresh. For a complete re-import, click **Force Re-sync** — note that this may take longer to complete for large databases.
+</Accordion>
+
+<Accordion title="Card balances are not reflecting recent reloads">
+  Balances update on each scheduled sync. To pull the latest balances immediately, navigate to **Settings → Integrations → Embed** and click **Sync Now**.
+</Accordion>
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Set Up Online Play Card Sales" icon="credit-card" href="/online-sales/play-cards">
+    Configure the play card widget to let guests buy and reload cards from your website.
+  </Card>
+  <Card title="Connect Intercard" icon="plug" href="/integrations/intercard">
+    Also using Intercard? Learn how to connect that system alongside Embed.
+  </Card>
+</CardGroup>

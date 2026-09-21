@@ -1,0 +1,137 @@
+---
+title: "Troubleshooting Common Rocket Effect Issues"
+sidebarTitle: "Troubleshooting"
+description: "Step-by-step fixes for the most common Rocket Effect issues, covering integrations, online sales, campaigns, and account management."
+---
+
+If something isn't working as expected, this guide walks you through the most common issues and their solutions. Work through the steps in order — most problems are resolved without needing to contact support. If a fix here doesn't resolve your issue, the support team is always available to help.
+
+## Integration Issues
+
+<AccordionGroup title="Integration Issues">
+  <Accordion title="Integration not connecting">
+    If Rocket Effect can't establish a connection to your card system, work through these steps:
+
+    1. Navigate to **Settings → Integrations** and open your card system's configuration panel.
+    2. Confirm that the API key or credentials you entered match exactly what your card system provider gave you — watch for extra spaces or copied line breaks.
+    3. Re-enter your API key from scratch rather than pasting over existing text, then save.
+    4. Check that your card system account is active and that the API access feature is enabled on your card system's side. If you're unsure, contact your card system's support team directly to confirm your API credentials are correct and that API access is turned on.
+    5. If the connection still fails after re-entering credentials, contact [support@rocketeffect.com](mailto:support@rocketeffect.com) with a screenshot of the error message shown in the integration panel.
+  </Accordion>
+
+  <Accordion title="Guest data not syncing">
+    If new guests or updated guest records from your card system aren't appearing in Rocket Effect, try the following:
+
+    1. Go to **Settings → Integrations** and check the **Status** indicator next to your integration. A yellow or red status means the connection needs attention — follow the steps in the "Integration not connecting" section above.
+    2. If the status shows green (connected), trigger a manual sync by clicking **Sync Now** in the integration panel.
+    3. Allow two to five minutes for the sync to complete, then refresh the Guests section to confirm records have updated.
+    4. If records are still missing after a manual sync, verify that the affected guests exist and are active in your card system before contacting support.
+  </Accordion>
+
+  <Accordion title="Card balance showing incorrectly">
+    Card balance data is pulled from your card system on a periodic sync schedule rather than in real time. If a guest's balance looks incorrect in Rocket Effect:
+
+    1. First confirm the balance is correct inside your card system's own software — if the card system itself shows the wrong balance, the issue is upstream of Rocket Effect.
+    2. If the card system shows the correct balance, force a refresh in Rocket Effect by opening the guest's profile and clicking **Refresh Balance**.
+    3. If the balance still doesn't update after a forced refresh, check that your integration is connected (green status) and that the sync hasn't paused due to a credential change on your card system's side.
+  </Accordion>
+</AccordionGroup>
+
+## Online Sales Issues
+
+<AccordionGroup title="Online Sales Issues">
+  <Accordion title="Play card purchase widget not showing on website">
+    If your embed widget isn't appearing on your website, work through these checks:
+
+    1. Copy the embed code from **Online Sales → Play Cards → Embed Widget** and compare it to what's currently placed on your site — confirm the code hasn't been altered or partially deleted.
+    2. Make sure the embed code is placed inside the `<body>` tag of the page, not inside a `<head>` tag or a `<noscript>` block.
+    3. Check that your integration is active (green status in **Settings → Integrations**). The widget requires an active integration to display correctly — if the integration is disconnected, the widget will be hidden.
+    4. Clear your browser cache and reload the page.
+    5. Test in a different browser or in a private/incognito window to rule out a browser extension conflict.
+  </Accordion>
+
+  <Accordion title="Payment failing at checkout">
+    Payment failures can occur on the guest side or the configuration side:
+
+    **For guests experiencing a declined payment:**
+    - Ask the guest to double-check their card number, expiration date, CVV, and billing ZIP code.
+    - Suggest the guest try a different payment method or contact their bank to confirm the card isn't blocked for online transactions.
+
+    **For persistent failures across multiple guests:**
+    1. Go to **Settings → Payment** and verify that your payment processor credentials (API keys or account IDs) are current and correctly entered.
+    2. Confirm with your payment processor that your account is in good standing and that online/card-not-present transactions are enabled.
+    3. If you recently changed your payment processor account or rotated API keys, update the credentials in Rocket Effect and save.
+
+    <Warning>
+      Do not share your payment processor API keys in plain text over email. If you need to send credentials to the Rocket Effect support team, use a secure sharing method such as a password manager's sharing feature.
+    </Warning>
+  </Accordion>
+</AccordionGroup>
+
+## Campaign Issues
+
+<AccordionGroup title="Campaign Issues">
+  <Accordion title="Emails going to spam">
+    Emails landing in spam are almost always a DNS authentication issue. To fix this:
+
+    1. Go to **Settings → Email → Sending Domains** and add your sending domain (e.g., `yourbusiness.com`).
+    2. Rocket Effect will generate **SPF** and **DKIM** DNS records for you to add to your domain's DNS settings. Copy these records and add them through your domain registrar or DNS host (e.g., GoDaddy, Cloudflare, Namecheap).
+    3. DNS changes can take up to **48 hours** to propagate. Once propagated, Rocket Effect will show your domain as **Verified**.
+    4. After verification, resend your campaign to re-engage any guests who may have missed it in spam.
+
+    <Note>
+      Until your sending domain is verified, outgoing emails use a shared Rocket Effect domain, which is more likely to trigger spam filters. Setting up your own verified domain is strongly recommended before sending large campaigns.
+    </Note>
+  </Accordion>
+
+  <Accordion title="SMS messages not delivering">
+    If your SMS campaign shows low or zero delivery, check the following:
+
+    1. **Opt-in status** — Rocket Effect only sends SMS to guests who have explicitly opted in. Open the campaign's audience segment and confirm it isn't filtered in a way that excludes opted-in guests. You can also check an individual guest's opt-in status on their profile page.
+    2. **Phone number format** — Rocket Effect requires phone numbers to include the country code (e.g., `+1` for US numbers). If guest phone numbers were imported without a country code, they may fail to deliver. Review your guest records for formatting issues and correct them before resending.
+    3. **Carrier filtering** — In rare cases, carriers filter messages that contain certain keywords. Review your message content for anything that may trigger carrier spam filters (e.g., excessive use of "FREE", "WIN", "CASH").
+  </Accordion>
+
+  <Accordion title="Campaign shows 0 opens">
+    A zero-open count usually points to one of three causes:
+
+    1. **Campaign didn't send** — Go to **Analytics → Campaign Performance** and confirm the campaign status shows **Sent**, not **Draft** or **Paused**. If the status is still Draft, publish and send the campaign.
+    2. **Empty audience segment** — Open the campaign and review the audience segment. If the segment criteria are too narrow, no guests may have matched at send time. Broaden the segment filters and reschedule.
+    3. **Tracking pixel blocked** — Email open tracking relies on a small tracking pixel. Some email clients (notably Apple Mail with Mail Privacy Protection enabled) block this pixel, which can cause opens to be underreported. Click-through data is a more reliable engagement signal in these cases — check the click count alongside opens.
+  </Accordion>
+</AccordionGroup>
+
+## Account Issues
+
+<AccordionGroup title="Account Issues">
+  <Accordion title="Can't log in">
+    If you're unable to log in to your Rocket Effect account:
+
+    1. Confirm you're using the correct email address associated with your account.
+    2. If you've forgotten your password, go to [https://rocketeffect.app/forgot-password](https://rocketeffect.app/forgot-password) and enter your email address. You'll receive a password reset link within a few minutes.
+    3. Check your spam folder if the reset email doesn't arrive in your inbox.
+    4. If you can log in but see a blank or broken dashboard, try clearing your browser cache or switching to a different browser.
+
+    <Warning>
+      If you believe your account has been accessed without your permission, reset your password immediately and contact [support@rocketeffect.com](mailto:support@rocketeffect.com) so the team can review account activity.
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Team member not receiving invitation email">
+    If a team member you've invited isn't receiving their invitation:
+
+    1. Ask them to check their **spam or junk folder** — invitation emails occasionally get filtered.
+    2. Go to **Settings → Team** and locate the team member's entry. Click **Resend Invitation** to send a fresh email.
+    3. Confirm the email address you entered is correct. If there's a typo, remove the invitation and create a new one with the correct address.
+    4. If the email address is correct and the resent invitation still doesn't arrive after 10 minutes, the recipient's email provider may be blocking the message. Ask them to add `noreply@rocketeffect.com` to their contacts or safe-sender list, then resend.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card title="Browse the FAQ" icon="circle-question" href="/support/faq">
+    Find quick answers to the most frequently asked questions about Rocket Effect features and setup.
+  </Card>
+  <Card title="Contact Support" icon="envelope" href="mailto:support@rocketeffect.com">
+    Still stuck? Email the Rocket Effect support team and a specialist will get back to you promptly.
+  </Card>
+</CardGroup>

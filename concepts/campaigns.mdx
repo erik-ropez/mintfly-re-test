@@ -1,0 +1,104 @@
+---
+title: "How Campaigns Work in Rocket Effect"
+sidebarTitle: "Campaigns"
+description: "Understand campaign types, audience targeting, lifecycle stages, and performance metrics to drive revenue from your FEC's marketing automation."
+---
+
+A campaign in Rocket Effect is a scheduled or automated communication — delivered via email or SMS — sent to a defined audience segment of your guests. Campaigns are the primary way you turn guest profile data into revenue, bringing customers back through timely, personalized outreach without requiring manual effort for every send.
+
+## Campaign Types
+
+Rocket Effect supports three distinct campaign types, each suited to different marketing goals. Choose the type that matches your objective before building your audience and content.
+
+<Tabs>
+  <Tab title="One-Time Blast">
+    A **one-time blast** is a single message sent to a defined audience at a specific date and time. Use blasts for promotions, announcements, and seasonal offers.
+
+    **Best for:**
+    - New game or attraction announcements
+    - Limited-time promotions (e.g., "Double Points Weekend")
+    - Holiday greetings and seasonal campaigns
+    - Re-engaging your full guest list after a period of inactivity
+
+    **How it works:** You define the audience, write the message, schedule the send time, and Rocket Effect delivers it once. No follow-up messages are sent unless you create a new campaign.
+  </Tab>
+  <Tab title="Automated Trigger-Based">
+    An **automated trigger-based campaign** fires automatically when a guest meets a specific condition or reaches a defined milestone. Once configured, it runs in the background without any manual action on your part.
+
+    **Common triggers:**
+    - **Birthday** — Send a reward or offer in the days leading up to a guest's birthday (or a child's birthday via the Family Member Registry)
+    - **Win-back** — Reach guests who haven't visited in 30, 60, or 90 days with an incentive to return
+    - **Post-visit** — Follow up with guests 24–48 hours after a visit to request a review or offer a next-visit discount
+    - **Low balance** — Alert guests when their card balance drops below a threshold you set
+    - **Loyalty milestone** — Congratulate guests when they reach a new points tier or earn a reward
+
+    **How it works:** You configure the trigger conditions, message content, and any attached offer once. Rocket Effect evaluates guest data continuously and sends the message automatically when the conditions are met.
+
+    <Tip>
+      Start with birthday automation before building any other campaign. It requires minimal setup, runs indefinitely without maintenance, and consistently delivers the highest ROI of any campaign type for FECs — often driving 3–5× more redemptions than a standard blast.
+    </Tip>
+  </Tab>
+  <Tab title="Drip Sequence">
+    A **drip sequence** is a series of messages sent to a guest over time, triggered by an initial action or enrollment. Drips are ideal for nurturing new guests, onboarding loyalty program members, or guiding prospects through a multi-step offer.
+
+    **Best for:**
+    - New guest welcome sequences (e.g., day 1, day 7, day 30 after first visit)
+    - Party booking follow-ups and reminders
+    - Loyalty program onboarding (explain points, tiers, and redemption)
+    - Multi-touch promotional sequences
+
+    **How it works:** You define the sequence of messages, the delay between each step, and the entry condition (e.g., new guest registers a card). Guests move through the sequence automatically and exit when the sequence ends or when they meet an exit condition you define (such as making a return visit).
+  </Tab>
+</Tabs>
+
+## Audience Targeting
+
+Every campaign in Rocket Effect is sent to a targeted audience segment built from your guest profile data. Precise targeting means your messages are relevant — which increases open rates, redemptions, and revenue while reducing unsubscribes.
+
+You can filter your audience by any combination of:
+
+- **Visit frequency** — Number of visits in the last 30, 60, or 90 days
+- **Spend amount** — Lifetime or period spend above or below a threshold
+- **Favorite game** — Guests who frequently play specific game categories
+- **Card type** — Filter by the type of play card the guest holds
+- **Location** — For multi-location centers, target guests associated with a specific venue
+
+Saved audience segments can be reused across multiple campaigns, keeping your targeting consistent without rebuilding filters each time.
+
+## Campaign Lifecycle
+
+Every campaign moves through four stages from creation to completion:
+
+| Stage | Description |
+|---|---|
+| **Draft** | Campaign is being built. Audience, content, and schedule are not yet finalized. No messages have been sent. |
+| **Scheduled** | Campaign is finalized and queued. It will send automatically at the configured time or when trigger conditions are met. |
+| **Active** | Campaign is currently sending (for blasts) or actively monitoring for trigger conditions (for automated and drip campaigns). |
+| **Completed** | All messages have been sent. The campaign is closed and its performance data is available in analytics. |
+
+You can pause an active campaign at any time from the **Campaigns** dashboard. Paused campaigns return to a scheduled state and resume sending on your command.
+
+## Campaign Performance Metrics
+
+Rocket Effect tracks the following metrics for every campaign, available in the **Campaign Performance** report:
+
+| Metric | What It Measures |
+|---|---|
+| **Sends** | Total number of messages delivered to the audience |
+| **Opens** | Number (and percentage) of recipients who opened the email |
+| **Clicks** | Number of recipients who clicked a link within the message |
+| **Conversions** | Number of recipients who completed a defined action (e.g., redeemed an offer, completed a booking) |
+| **Revenue Attributed** | Total spend tracked from guests who converted via this campaign |
+
+Use these metrics to compare campaign performance over time, identify your highest-ROI message types, and refine your audience targeting for future sends.
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Email Campaigns" icon="envelope" href="/marketing/email-campaigns">
+    Build, design, and send email campaigns to your guest segments.
+  </Card>
+  <Card title="SMS Campaigns" icon="message-sms" href="/marketing/sms-campaigns">
+    Create and automate SMS messages to reach guests directly on their phones.
+  </Card>
+</CardGroup>
