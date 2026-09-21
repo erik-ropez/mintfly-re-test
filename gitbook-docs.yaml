@@ -1,0 +1,66 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+version: 1
+site:
+  title: Rocket Effect
+  structure:
+    - type: section
+      key: section-documentation
+      title: Documentation
+      path: documentation
+      default: true
+      children:
+        - type: space
+          key: space-core-concepts
+          title: Core Concepts
+          path: core-concepts
+          default: true
+          content:
+            directory: ./concepts
+        - type: space
+          key: space-online-sales
+          title: Online Sales
+          path: online-sales
+          content:
+            directory: ./online-sales
+        - type: space
+          key: space-marketing-tools
+          title: Marketing Tools
+          path: marketing-tools
+          content:
+            directory: ./marketing
+        - type: space
+          key: space-booking-events
+          title: Booking & Events
+          path: booking-events
+          content:
+            directory: ./booking
+        - type: space
+          key: space-analytics-reporting
+          title: Analytics & Reporting
+          path: analytics-reporting
+          content:
+            directory: ./analytics
+        - type: space
+          key: space-integrations
+          title: Integrations
+          path: integrations
+          content:
+            directory: ./integrations
+        - type: space
+          key: space-help-support
+          title: Help & Support
+          path: help-support
+          content:
+            directory: ./support
+    - type: section
+      key: section-developer-docs
+      title: Developer Docs
+      path: developer-docs
+      children:
+        - type: space
+          key: space-admin-panel
+          title: Admin Panel
+          path: admin-panel
+          default: true
+          content:
+            directory: ./backpack
